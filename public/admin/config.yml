@@ -4,12 +4,25 @@ backend:
 media_folder: "public/media"
 public_folder: "/media"
 collections:
-  - name: "page"
-    label: "Page"
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "data/pages/index.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Type", name: "type", widget: "hidden", default: "system"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layout.njk"}
+          - {label: "Body", name: "body", widget: "markdown"}
+  - name: "custompages"
+    label: "Custom Pages"
     folder: "data/pages"
     create: true
     slug: "{{slug}}"
+    filter: {field: "type", value: "custom"}
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Type", name: "type", widget: "hidden", default: "custom"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "layout.njk"}
       - {label: "Body", name: "body", widget: "markdown"}
