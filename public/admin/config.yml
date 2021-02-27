@@ -6,7 +6,7 @@ public_folder: "/media"
 collections:
   - name: "page"
     label: "Page"
-    folder: "public/data/pages"
+    folder: "data/pages"
     create: true
     slug: "{{slug}}"
     fields:
