@@ -4,11 +4,11 @@ backend:
 media_folder: "public/media"
 public_folder: "/media"
 collections:
-  - label: "Pages"
-    name: "pages"
+  - name: "pages"
+    label: "Pages"
     files:
-      - label: "Home Page"
-        name: "home"
+      - name: "home"
+        label: "Home Page"
         file: "data/pages/index.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
@@ -26,3 +26,16 @@ collections:
       - {label: "Type", name: "type", widget: "hidden", default: "custom"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "layout.njk"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "config"
+    label: "Config"
+    files:
+      - name: "nav"
+        label: "Nav"
+        file: "data/config/nav.json"
+        fields:
+          - name: links
+            label: Links
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Url, name: url, widget: string}
