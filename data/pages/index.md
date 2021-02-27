@@ -1,6 +1,6 @@
 ---
-title: test
+title: Home
 type: system
 layout: layout.njk
 ---
-this is a test
+this is the homepage
