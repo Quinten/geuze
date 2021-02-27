@@ -1,0 +1,22 @@
+{
+  "name": "geuze",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quinten/geuze.git"
+  },
+  "author": "Quinten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Quinten/geuze/issues"
+  },
+  "homepage": "https://github.com/Quinten/geuze#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}
