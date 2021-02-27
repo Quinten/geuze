@@ -10,7 +10,12 @@ title: Geuze
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body>
-        {{ content | safe }}
+        <nav>
+            <ul>{% for link in nav.links %}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}</ul>
+        </nav>
+        <main>
+            {{ content | safe }}
+        </main>
         <script>
             if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", user => {

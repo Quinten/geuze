@@ -2,6 +2,7 @@ module.exports = {
     dir: {
         input: "data/pages",
         output: "public",
-        layouts: "../../layouts"
+        layouts: "../../layouts",
+        data: "../config"
     }
 };
