@@ -29,6 +29,11 @@ collections:
   - name: "config"
     label: "Config"
     files:
+      - name: "header"
+        label: "Header"
+        file: "data/config/header.json"
+        fields:
+          - {name: logo, label: Logo, widget: image}
       - name: "nav"
         label: "Nav"
         file: "data/config/nav.json"
