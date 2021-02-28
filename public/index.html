@@ -4,9 +4,13 @@
         <meta charset="utf-8">
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/styles.css">
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body>
+        <header>
+            <img src="/media/supernapie-logo.svg" alt="logo" width="128" height="64" />
+        </header>
         <nav>
             <ul><li><a href="/">Home</a></li><li><a href="/about">About</a></li></ul>
         </nav>
@@ -14,6 +18,7 @@
             <p>this is the super duper awesome homepage</p>
 
         </main>
+        <footer>footer</footer>
         <script>
             if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", user => {
