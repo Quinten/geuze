@@ -19,8 +19,39 @@ body > main {
 
 body > footer {
     width: 100%;
-    padding: 1em 0;
-    text-align: center;
     margin-top: auto;
     background: #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > footer > section {
+    width: 100%;
+    max-width: calc(960px + 2em);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body > footer > section:last-child small {
+    display: block;
+    padding: 1rem;
+}
+
+body > footer > section:last-child nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+body > footer > section:last-child nav li {
+    display: block;
+    padding: 1em;
+}
+
+body > footer > section:last-child nav a {
+    color: #333;
+    text-decoration: none;
 }

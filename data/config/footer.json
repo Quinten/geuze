@@ -1,3 +1,13 @@
 {
+  "bottomlinks": [
+    {
+      "title": "Terms",
+      "url": "/terms"
+    },
+    {
+      "title": "Privacy",
+      "url": "/privacy"
+    }
+  ],
   "copyright": "© 2021 Geuze Developers"
 }

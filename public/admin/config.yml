@@ -65,4 +65,10 @@ collections:
         label: "Footer"
         file: "data/config/footer.json"
         fields:
+          - name: "bottomlinks"
+            label: "Bottom links"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Url", name: "url", widget: "string"}
           - {label: "Copyright", name: "copyright", widget: "string"}
