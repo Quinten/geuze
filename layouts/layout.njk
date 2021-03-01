@@ -23,7 +23,7 @@ title: Geuze
         <main>
             {{ content | safe }}
         </main>
-        <footer>footer</footer>
+        <footer>{{ footer.copyright }}</footer>
         <a href="javascript:(e=>document.querySelector('body').setAttribute('menu', document.querySelector('body').getAttribute('menu') !== 'true'))()"><span>Menu</span></a>
         <script>
             if (window.netlifyIdentity) {

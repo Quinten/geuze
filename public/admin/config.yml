@@ -58,3 +58,8 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}
+      - name: "footer"
+        label: "Footer"
+        file: "data/config/footer.json"
+        fields:
+          - {label: "Copyright", name: "copyright", widget: "string"}
