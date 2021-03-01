@@ -1,13 +1,10 @@
-html, body {
-    min-height: 100vh;
-}
-
 body {
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: sans-serif;
+    min-height: 100vh;
 }
 
 body > main,
@@ -51,6 +48,10 @@ body > header > nav > ul {
         display: flex;
         justify-content: space-between;
     }
+
+    body > nav > ul > li > a:hover {
+        background: #ddd;
+    }
 }
 
 body > header > nav > ul > li,
@@ -58,23 +59,14 @@ body > nav > ul > li {
     display: block;
 }
 
+
+body > a,
 body > header > nav > ul > li > a,
 body > nav > ul > li > a {
     display: block;
     padding: 1em;
     text-decoration: none;
-}
-
-body > header > nav > ul > li > a {
     color: #333;
-}
-
-body > nav > ul > li > a {
-    color: #333;
-}
-
-body > nav > ul > li > a:hover {
-    background: #ddd;
 }
 
 body > footer {
@@ -99,8 +91,8 @@ body > a {
     body > a {
         display: block;
         position: absolute;
-        top: 1em;
-        right: 1em;
+        top: 0;
+        right: 0;
     }
 
     body[menu="true"] {
@@ -123,5 +115,13 @@ body > a {
 
     body[menu="true"] > header {
         width: 100%;
+    }
+
+    body[menu="true"] > a:before {
+        content: 'Close';
+    }
+
+    body[menu="true"] > a span {
+        display: none;
     }
 }
