@@ -1,5 +1,5 @@
 ---
-type: system
+type: custom
 layout: layout.njk
 title: Terms
 metadescription: Terms and conditions.

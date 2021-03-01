@@ -1,5 +1,5 @@
 ---
-type: system
+type: custom
 layout: layout.njk
 title: Privacy
 metadescription: Privacy policy.
