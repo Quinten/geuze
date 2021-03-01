@@ -7,66 +7,14 @@ body {
     min-height: 100vh;
 }
 
-body > main,
 body > header {
-    width: calc(100% - 2em);
-    max-width: 960px;
-}
-
-body > header > img {
-    width: auto;
-    height: 64px;
-    margin: 1em 1em 1em 0;
-}
-
-body > nav {
-    width: 100vw;
-    background: #eee;
-}
-
-body > nav > ul {
     width: 100%;
     max-width: calc(960px + 2em);
-    margin: 0 auto;
-    padding: 0;
-    display: block;
 }
 
-body > header > nav > ul {
-    padding: 0;
-    margin: 0 -1em 0 0;
-}
-
-@media screen and (min-width: 768px) {
-
-    body > header > nav > ul,
-    body > nav > ul {
-        display: flex;
-    }
-
-    body > header {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    body > nav > ul > li > a:hover {
-        background: #ddd;
-    }
-}
-
-body > header > nav > ul > li,
-body > nav > ul > li {
-    display: block;
-}
-
-
-body > a,
-body > header > nav > ul > li > a,
-body > nav > ul > li > a {
-    display: block;
-    padding: 1em;
-    text-decoration: none;
-    color: #333;
+body > main {
+    width: calc(100% - 2em);
+    max-width: 960px;
 }
 
 body > footer {
@@ -75,53 +23,4 @@ body > footer {
     text-align: center;
     margin-top: auto;
     background: #ddd;
-}
-
-body > a {
-    display: none;
-}
-
-@media screen and (max-width: 767px) {
-
-    body > header > nav,
-    body > nav {
-        display: none;
-    }
-
-    body > a {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    body[menu="true"] {
-        background: #eee;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        padding-top: 3em;
-    }
-
-    body[menu="true"] > header > nav,
-    body[menu="true"] > nav {
-        display: block;
-    }
-
-    body[menu="true"] > footer,
-    body[menu="true"] > main,
-    body[menu="true"] > header > img {
-        display: none;
-    }
-
-    body[menu="true"] > header {
-        width: 100%;
-    }
-
-    body[menu="true"] > a:before {
-        content: 'Close';
-    }
-
-    body[menu="true"] > a span {
-        display: none;
-    }
 }
