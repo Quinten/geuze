@@ -1,3 +1,9 @@
 {
-  "logo": "/media/logo.svg"
+  "logo": "/media/logo.svg",
+  "links": [
+    {
+      "title": "Contact us",
+      "url": "/contact"
+    }
+  ]
 }
