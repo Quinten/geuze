@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  branch: master
+  name: "git-gateway"
+  branch: "master"
 media_folder: "public/media"
 public_folder: "/media"
 collections:
@@ -10,6 +10,14 @@ collections:
       - name: "home"
         label: "Home Page"
         file: "data/pages/index.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Type", name: "type", widget: "hidden", default: "system"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layout.njk"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - name: "contact"
+        label: "Contact Page"
+        file: "data/pages/contact.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Type", name: "type", widget: "hidden", default: "system"}
@@ -33,14 +41,20 @@ collections:
         label: "Header"
         file: "data/config/header.json"
         fields:
-          - {name: logo, label: Logo, widget: image}
+          - {name: "logo", label: "Logo", widget: "image"}
+          - name: "links"
+            label: "Quick links"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Url", name: "url", widget: "string"}
       - name: "nav"
         label: "Nav"
         file: "data/config/nav.json"
         fields:
-          - name: links
-            label: Links
-            widget: list
+          - name: "links"
+            label: "Links"
+            widget: "list"
             fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Url, name: url, widget: string}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Url", name: "url", widget: "string"}
