@@ -13,6 +13,9 @@ title: Geuze
     <body>
         <header>
             <img src="{{ header.logo }}" alt="logo" width="128" height="64" />
+            <nav>
+                <ul>{% for link in nav.links %}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}</ul>
+            </nav>
         </header>
         <nav>
             <ul>{% for link in nav.links %}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}</ul>
@@ -21,6 +24,7 @@ title: Geuze
             {{ content | safe }}
         </main>
         <footer>footer</footer>
+        <a href="javascript:(e=>document.querySelector('body').setAttribute('menu', document.querySelector('body').getAttribute('menu') !== 'true'))()"><span>Menu</span></a>
         <script>
             if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", user => {

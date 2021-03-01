@@ -10,6 +10,9 @@
     <body>
         <header>
             <img src="/media/supernapie-logo.svg" alt="logo" width="128" height="64" />
+            <nav>
+                <ul><li><a href="/">Home</a></li><li><a href="/about">About</a></li></ul>
+            </nav>
         </header>
         <nav>
             <ul><li><a href="/">Home</a></li><li><a href="/about">About</a></li></ul>
@@ -19,6 +22,7 @@
 
         </main>
         <footer>footer</footer>
+        <a href="javascript:(e=>document.querySelector('body').setAttribute('menu', document.querySelector('body').getAttribute('menu') !== 'true'))()"><span>Menu</span></a>
         <script>
             if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", user => {
