@@ -25,12 +25,12 @@ metadescription: The summary in search results
             {{ content | safe }}
         </main>
         <footer>
-            <section>
+            <div>
                 <nav>
                     <ul>{% for link in footer.bottomlinks %}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}</ul>
                 </nav>
                 <small>{{ footer.copyright }}</small>
-            </section>
+            </div>
         </footer>
         <a href="javascript:(e=>document.querySelector('body').setAttribute('menu', document.querySelector('body').getAttribute('menu') !== 'true'))()"><span>Menu</span></a>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

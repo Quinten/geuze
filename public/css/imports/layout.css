@@ -26,7 +26,7 @@ body > footer {
     align-items: center;
 }
 
-body > footer > section {
+body > footer > div {
     width: 100%;
     max-width: calc(960px + 2em);
     display: flex;
@@ -35,23 +35,23 @@ body > footer > section {
     align-items: center;
 }
 
-body > footer > section:last-child small {
+body > footer > div:last-child small {
     display: block;
     padding: 1rem;
 }
 
-body > footer > section:last-child nav ul {
+body > footer > div:last-child nav ul {
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-body > footer > section:last-child nav li {
+body > footer > div:last-child nav li {
     display: block;
     padding: 1em;
 }
 
-body > footer > section:last-child nav a {
+body > footer > div:last-child nav a {
     color: #333;
     text-decoration: none;
 }
