@@ -1,0 +1,27 @@
+---
+title: Contact
+metadescription: Contact us
+layout: layout.njk
+---
+<div>
+    {{ content | safe }}
+</div>
+<link rel="stylesheet" href="/css/contact.css">
+<div>
+    <form name="contact" method="POST" data-netlify="true" action="/contact?success=yes" netlify-honeypot="telephone">
+        <label>Firstname</label>
+        <input type="text" name="firstname">
+        <label>Lastname</label>
+        <input type="text" name="lastname">
+        <label>Email</label>
+        <input type="email" name="email">
+        <label for="telephone">Telephone</label>
+        <input type="text" name="telephone" id="telephone">
+        <label>Message</label>
+        <textarea name="message">
+        </textarea>
+        <div>
+            <button type="submit">Send</button>
+        </div>
+    </form>
+</div>
