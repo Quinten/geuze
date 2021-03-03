@@ -19,28 +19,28 @@
         </nav>
         <main>
             <div>
-    <p>This is the contactpage. A form is on the todo list.</p>
+    <p>This is the contactpage.</p>
 
 </div>
 <link rel="stylesheet" href="/css/contact.css">
 <div>
-    <form name="contact" method="POST" data-netlify="true" action="/contact?success=yes" netlify-honeypot="telephone">
+    <form name="contact" method="POST" data-netlify="true" action="/contact/?success=yes" netlify-honeypot="dob" required-message="This field is required." success-message="The message has been send. You&#39;ll hear from us soon.">
         <label>Firstname</label>
         <input type="text" name="firstname">
         <label>Lastname</label>
         <input type="text" name="lastname">
         <label>Email</label>
         <input type="email" name="email">
-        <label for="telephone">Telephone</label>
-        <input type="text" name="telephone" id="telephone">
+        <label for="dob">Date of birth</label>
+        <input type="text" name="dob" id="dob">
         <label>Message</label>
-        <textarea name="message">
-        </textarea>
+        <textarea name="message"></textarea>
         <div>
             <button type="submit">Send</button>
         </div>
     </form>
 </div>
+<script type="module" src="/js/contact.js"></script>
 
         </main>
         <footer>

@@ -14,8 +14,8 @@ input[type="text"] {
     max-width: 24em;
 }
 
-[for="telephone"],
-[id="telephone"] {
+[for="dob"],
+[id="dob"] {
     display: none;
 }
 
@@ -27,3 +27,15 @@ textarea {
     width: 100%;
     max-width: 24em;
 }
+
+input + p,
+textarea + p {
+    color: red;
+    margin-top: 0;
+}
+
+input[error="true"],
+textarea[error="true"] {
+    border-color: red;
+}
+
