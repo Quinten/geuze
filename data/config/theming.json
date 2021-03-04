@@ -1,1 +1,10 @@
-{}
+{
+  "colors": {
+    "bodyBg": "#ffffff",
+    "bodyColor": "#333333"
+  },
+  "fonts": {
+    "mainFont": "sans-serif",
+    "headingFont": "serif"
+  }
+}
