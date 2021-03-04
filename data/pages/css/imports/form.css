@@ -30,7 +30,7 @@ textarea {
 
 input + p,
 textarea + p {
-    color: red;
+    color: var(--error-color);
     margin-top: 0;
 }
 

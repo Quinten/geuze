@@ -14,8 +14,6 @@
     "error-color": "#e74c3c"
   },
   "fonts": {
-    "mainFont": "sans-serif",
-    "headingFont": "serif",
     "main-font": "sans-serif",
     "heading-font": "serif"
   }

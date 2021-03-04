@@ -6,7 +6,7 @@ body > header > img {
 
 body > nav {
     width: 100vw;
-    background: #eee;
+    background: var(--cta-color);
 }
 
 body > nav > ul {
@@ -35,7 +35,7 @@ body > header > nav > ul {
     }
 
     body > nav > ul > li > a:hover {
-        background: #ddd;
+        background: var(--cta-hover-color);
     }
 }
 
@@ -44,14 +44,23 @@ body > nav > ul > li {
     display: block;
 }
 
-
-body > a,
 body > header > nav > ul > li > a,
 body > nav > ul > li > a {
     display: block;
     padding: 1em;
     text-decoration: none;
-    color: var(--body-color);
+    color: var(--cta-text-color);
+}
+
+@media screen and (min-width: 768px) {
+
+    body > header > nav > ul > li > a {
+        color: var(--body-color);
+    }
+
+    body > header > nav > ul > li > a:hover {
+        color: var(--muted-color);
+    }
 }
 
 body > a {
@@ -65,10 +74,13 @@ body > a {
         position: absolute;
         top: 0;
         right: 0;
+        padding: 1em;
+        text-decoration: none;
+        color: var(--cta-color);
     }
 
     body[menu="true"] {
-        background: #eee;
+        background: var(--cta-color);
         flex-direction: column-reverse;
         justify-content: flex-end;
         padding-top: 3em;
@@ -85,6 +97,10 @@ body > a {
     body[menu="true"] > header > nav,
     body[menu="true"] > nav {
         display: block;
+    }
+
+    body[menu="true"] > a {
+        color: var(--cta-text-color);
     }
 
     body[menu="true"] > a:before {
