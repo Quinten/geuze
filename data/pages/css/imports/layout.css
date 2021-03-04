@@ -13,6 +13,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
 }
 
+main > a {
+    color: var(--cta-color);
+}
+
+main > a:hover {
+    color: var(--cta-hover-color);
+}
+
 body > header {
     width: 100%;
     max-width: calc(960px + 2em);
