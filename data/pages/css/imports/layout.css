@@ -13,12 +13,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
 }
 
-main > a {
+main a {
     color: var(--cta-color);
 }
 
-main > a:hover {
+main a:hover {
     color: var(--cta-hover-color);
+    text-decoration: none;
 }
 
 body > header {
