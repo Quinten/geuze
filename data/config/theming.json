@@ -2,11 +2,11 @@
   "colors": {
     "cta-text-color": "#ffffff",
     "muted-color": "#34495e",
-    "cta-color": "#2c3e50",
+    "cta-color": "#1d5c86",
     "muted-bg": "#ecf0f1",
     "funnel-color": "#27ae60",
     "body-bg": "#ffffff",
-    "cta-hover-color": "#34495e",
+    "cta-hover-color": "#1a5175",
     "body-color": "#2c3e50",
     "success-color": "#27ae60",
     "funnel-text-color": "#ffffff",
