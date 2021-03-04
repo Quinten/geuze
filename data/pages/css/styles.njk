@@ -1,5 +1,8 @@
 ---
 permalink: "css/styles.css"
 ---
+{% set css %}
 {% include "./imports/layout.css" %}
 {% include "./imports/header.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

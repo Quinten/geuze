@@ -1,4 +1,7 @@
 ---
 permalink: "css/contact.css"
 ---
+{% set css %}
 {% include "./imports/form.css" %}
+{% endset %}
+{{ css | cssmin | safe }}
