@@ -8,11 +8,15 @@
     "body-bg": "#ffffff",
     "cta-hover-color": "#3498db",
     "body-color": "#2c3e50",
+    "success-color": "#e74c3c",
     "funnel-text-color": "#ffffff",
-    "funnel-hover-color": "#2ecc71"
+    "funnel-hover-color": "#2ecc71",
+    "error-color": "#27ae60"
   },
   "fonts": {
     "mainFont": "sans-serif",
-    "headingFont": "serif"
+    "headingFont": "serif",
+    "main-font": "sans-serif",
+    "heading-font": "serif"
   }
 }
