@@ -72,3 +72,19 @@ collections:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}
           - {label: "Copyright", name: "copyright", widget: "string"}
+      - name: "theming"
+        label: "Theming"
+        file: "data/config/theming.json"
+        fields:
+          - name: "colors"
+            label: "Colors"
+            widget: "object"
+            fields:
+              - {label: "bodyBg", name: "bodyBg", widget: "color"}
+              - {label: "bodyColor", name: "bodyColor", widget: "color"}
+          - name: "fonts"
+            label: "Fonts"
+            widget: "object"
+            fields:
+              - {label: "mainFont", name: "mainFont", widget: "string"}
+              - {label: "headingFont", name: "headingFont", widget: "string"}
