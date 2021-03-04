@@ -6,6 +6,8 @@ module.exports = function(eleventyConfig) {
         return new CleanCSS({}).minify(code).styles;
     });
 
+    eleventyConfig.addWatchTarget("./data/pages/css/imports/");
+
     return {
         dir: {
             input: "data/pages",

@@ -80,8 +80,16 @@ collections:
             label: "Colors"
             widget: "object"
             fields:
-              - {label: "bodyBg", name: "bodyBg", widget: "color"}
-              - {label: "bodyColor", name: "bodyColor", widget: "color"}
+              - {label: "Body Background", name: "body-bg", widget: "color"}
+              - {label: "Body Color", name: "body-color", widget: "color"}
+              - {label: "Muted Background", name: "muted-bg", widget: "color"}
+              - {label: "Muted Color", name: "muted-color", widget: "color"}
+              - {label: "CTA Color", name: "cta-color", widget: "color"}
+              - {label: "CTA Hover Color", name: "cta-hover-color", widget: "color"}
+              - {label: "CTA Text Color", name: "cta-text-color", widget: "color"}
+              - {label: "Funnel Color", name: "funnel-color", widget: "color"}
+              - {label: "Funnel Hover Color", name: "funnel-hover-color", widget: "color"}
+              - {label: "Funnel Text Color", name: "funnel-text-color", widget: "color"}
           - name: "fonts"
             label: "Fonts"
             widget: "object"

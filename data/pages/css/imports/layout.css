@@ -3,8 +3,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: sans-serif;
+    font-family: var(--mainFont);
     min-height: 100vh;
+    background: var(--bodyBg);
+    color: var(--bodyColor);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headingFont);
 }
 
 body > header {
@@ -52,6 +58,6 @@ body > footer > div:last-child nav li {
 }
 
 body > footer > div:last-child nav a {
-    color: #333;
+    color: var(--bodyColor);
     text-decoration: none;
 }
