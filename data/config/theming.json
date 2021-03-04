@@ -1,5 +1,15 @@
 {
   "colors": {
+    "cta-text-color": "#ffffff",
+    "muted-color": "#34495e",
+    "cta-color": "#2980b9",
+    "muted-bg": "#ecf0f1",
+    "funnel-color": "#27ae60",
+    "body-bg": "#ffffff",
+    "cta-hover-color": "#3498db",
+    "body-color": "#2c3e50",
+    "funnel-text-color": "#ffffff",
+    "funnel-hover-color": "#2ecc71"
   },
   "fonts": {
     "mainFont": "sans-serif",
