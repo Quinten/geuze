@@ -11,16 +11,16 @@ successmessage: The message has been send. You'll hear from us soon.
 <link rel="stylesheet" href="/css/contact.css">
 <div>
     <form name="contact" method="POST" data-netlify="true" action="/contact/?success=yes" netlify-honeypot="dob" required-message="{{ requiredmessage }}" success-message="{{ successmessage }}">
-        <label>Firstname</label>
-        <input type="text" name="firstname">
-        <label>Lastname</label>
-        <input type="text" name="lastname">
-        <label>Email</label>
-        <input type="email" name="email">
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" id="firstname">
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" id="lastname">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
         <label for="dob">Date of birth</label>
         <input type="text" name="dob" id="dob">
-        <label>Message</label>
-        <textarea name="message"></textarea>
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
         <div>
             <button type="submit">Send</button>
         </div>
