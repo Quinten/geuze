@@ -27,6 +27,11 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Field required message", name: "requiredmessage", widget: "string"}
           - {label: "Success Message", name: "successmessage", widget: "string"}
+          - {label: "Label Firstname", name: "labelfirstname", widget: "string"}
+          - {label: "Label Lastname", name: "labellastname", widget: "string"}
+          - {label: "Label Email", name: "labelemail", widget: "string"}
+          - {label: "Label Message", name: "labelmessage", widget: "string"}
+          - {label: "Label Button", name: "labelbutton", widget: "string"}
   - name: "custompages"
     label: "Custom Pages"
     folder: "data/pages"

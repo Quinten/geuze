@@ -4,6 +4,11 @@ metadescription: Contact us
 layout: layout.njk
 requiredmessage: This field is required.
 successmessage: The message has been send. You'll hear from us soon.
+labelfirstname: Firstname
+labellastname: Lastname
+labelemail: Email
+labelmessage: Message
+labelbutton: Send
 ---
 <div>
     {{ content | safe }}
@@ -11,18 +16,18 @@ successmessage: The message has been send. You'll hear from us soon.
 <link rel="stylesheet" href="/css/contact.css">
 <div>
     <form name="contact" method="POST" data-netlify="true" action="/contact/?success=yes" netlify-honeypot="dob" required-message="{{ requiredmessage }}" success-message="{{ successmessage }}">
-        <label for="firstname">Firstname</label>
+        <label for="firstname">{{ labelfirstname }}</label>
         <input type="text" name="firstname" id="firstname">
-        <label for="lastname">Lastname</label>
+        <label for="lastname">{{ labellastname }}</label>
         <input type="text" name="lastname" id="lastname">
-        <label for="email">Email</label>
+        <label for="email">{{ labelemail }}</label>
         <input type="email" name="email" id="email">
         <label for="dob">Date of birth</label>
         <input type="text" name="dob" id="dob">
-        <label for="message">Message</label>
+        <label for="message">{{ labelmessage }}</label>
         <textarea name="message" id="message"></textarea>
         <div>
-            <button type="submit">Send</button>
+            <button type="submit">{{ labelbutton }}</button>
         </div>
     </form>
 </div>
