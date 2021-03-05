@@ -15,7 +15,9 @@ metadescription: The summary in search results
     </head>
     <body>
         <header>
-            <img src="{{ header.logo }}" alt="logo" width="128" height="64" />
+            <a href="/">
+                <img src="{{ header.logo }}" alt="logo" width="128" height="64" />
+            </a>
             <nav>
                 <ul>{% for link in header.links %}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}</ul>
             </nav>
