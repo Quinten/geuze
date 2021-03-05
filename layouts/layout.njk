@@ -9,8 +9,19 @@ metadescription: The summary in search results
         <title>{{ title }}</title>
         <meta name="description" content="{{ metadescription }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preload" href="/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
+        {% set css %}
+        :root {
+        {% for name, color in theming.colors %}
+        --{{ name }}: {{ color }};
+        {% endfor %}
+        {% for name, font in theming.fonts %}
+        --{{ name }}: {{ font | safe }};
+        {% endfor %}
+        }
+        {% include "../data/pages/css/imports/layout.css" %}
+        {% include "../data/pages/css/imports/header.css" %}
+        {% endset %}
+        <style>{{ css | cssmin | safe }}</style>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preload" href="{{ theming.googlefonturl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ theming.googlefonturl }}"></noscript>
