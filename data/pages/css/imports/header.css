@@ -23,6 +23,11 @@ body > header > nav > ul {
     margin: 0;
 }
 
+body > nav > ul > li > a[active="true"],
+body > nav > ul > li > a:hover {
+    background: var(--cta-hover-color);
+}
+
 @media screen and (min-width: 768px) {
 
     body > header > nav > ul,
@@ -33,10 +38,6 @@ body > header > nav > ul {
     body > header {
         display: flex;
         justify-content: space-between;
-    }
-
-    body > nav > ul > li > a:hover {
-        background: var(--cta-hover-color);
     }
 }
 
@@ -110,5 +111,10 @@ body > a {
 
     body[menu="true"] > a span {
         display: none;
+    }
+
+    body > header > nav > ul > li > a[active="true"],
+    body > header > nav > ul > li > a:hover {
+        background: var(--cta-hover-color);
     }
 }
