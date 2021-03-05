@@ -7,6 +7,11 @@ metadescription: This is the meta description of the contact page. Good for SEO.
   results.
 requiredmessage: This field is required.
 successmessage: The message has been send. You'll hear from us soon.
+labelfirstname: Voornaam
+labellastname: Achternaam
+labelemail: E-mail
+labelmessage: Boodschap
+labelbutton: Verstuur
 ---
 # Contact Us
 
