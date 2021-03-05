@@ -2,15 +2,15 @@
   "colors": {
     "cta-text-color": "#fdfdff",
     "muted-color": "#575e60",
-    "cta-color": "#62929e",
+    "cta-color": "#62727f",
     "muted-bg": "#f6f6f4",
-    "funnel-color": "#62929e",
+    "funnel-color": "#896978",
     "body-bg": "#fdfdff",
-    "cta-hover-color": "#5d8c98",
+    "cta-hover-color": "#758695",
     "body-color": "#393d3f",
     "success-color": "#95c623",
     "funnel-text-color": "#fdfdff",
-    "funnel-hover-color": "#5d8c98",
+    "funnel-hover-color": "#9d808e",
     "error-color": "#e55812"
   },
   "fonts": {
