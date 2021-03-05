@@ -11,7 +11,8 @@ metadescription: The summary in search results
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="{{ theming.googlefonturl }}">
+        <link rel="preload" href="{{ theming.googlefonturl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ theming.googlefonturl }}"></noscript>
     </head>
     <body>
         <header>
