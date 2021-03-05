@@ -5,8 +5,8 @@ title: Contact Us
 metadescription: This is the meta description of the contact page. Good for SEO.
   It is not visible on the frontend, but will appear as a summary in search
   results.
-requiredmessage: Cannot be empty!
-successmessage: Haha, that worked!
+requiredmessage: This field is required.
+successmessage: The message has been send. You'll hear from us soon.
 ---
 # Contact Us
 
