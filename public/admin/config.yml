@@ -98,4 +98,6 @@ collections:
             fields:
               - {label: "Main Font", name: "main-font", widget: "string"}
               - {label: "Heading Font", name: "heading-font", widget: "string"}
-              - {label: "Google Font URL", name: "google-font-url", widget: "string"}
+          - label: "Google Font URL"
+            name: "googlefonturl"
+            widget: "string"

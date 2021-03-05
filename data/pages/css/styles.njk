@@ -7,7 +7,7 @@ permalink: "css/styles.css"
 --{{ name }}: {{ color }};
 {% endfor %}
 {% for name, font in theming.fonts %}
---{{ name }}: {{ font }};
+--{{ name }}: {{ font | safe }};
 {% endfor %}
 }
 {% include "./imports/layout.css" %}
