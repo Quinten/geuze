@@ -25,6 +25,8 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Meta description", name: "metadescription", widget: "text"}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Field required message", name: "requiredmessage", widget: "text"}
+          - {label: "Success Message", name: "successmessage", widget: "text"}
   - name: "custompages"
     label: "Custom Pages"
     folder: "data/pages"
