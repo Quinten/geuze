@@ -13,6 +13,4 @@ labelemail: Email
 labelmessage: Message
 labelbutton: Send
 ---
-# Contact Us
-
 Write us a message with the form below and we will get back to you...
