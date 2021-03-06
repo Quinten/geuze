@@ -70,3 +70,18 @@ body > footer > div:last-child nav a {
     color: var(--body-color);
     text-decoration: none;
 }
+
+[pancake="deconstructed"] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1em;
+}
+
+[pancake="deconstructed"] > div {
+    flex: 1 1 384px;
+    margin: 1em;
+}
+
+[pancake="deconstructed"] > div[grow="false"] {
+    flex: 0 1 384px;
+}
