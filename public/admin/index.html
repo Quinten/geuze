@@ -60,11 +60,13 @@
                 },
                 toBlock: function(obj) {
                     let code = '{% pancake %}';
-                    obj.pancake.forEach((pancake) => {
-                        code = code + '{% slice %}';
-                        code = code + pancake.slice;
-                        code = code + '{% endslice %}';
-                    });
+                    if (obj.pancake) {
+                        obj.pancake.forEach((pancake) => {
+                            code = code + '{% slice %}';
+                            code = code + pancake.slice;
+                            code = code + '{% endslice %}';
+                        });
+                    }
                     code = code + '{% endpancake %}';
                     return code;
                 },
