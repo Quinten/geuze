@@ -50,6 +50,8 @@
                 }],
                 pattern: /{% pancake %}(.*){% endpancake %}/,
                 fromBlock: function(match) {
+                    console.log('fromBlock');
+                    console.log(match);
                     //var contents = match[1];
                     //var slices = contents.match(/{% slice %}(.*){% endslice %}/g)
                     return {
@@ -57,9 +59,14 @@
                     };
                 },
                 toBlock: function(obj) {
-                    console.log('toBlock');
-                    console.log(obj);
-                    return '{% pancake %}{% endpancake %}';
+                    let code = '{% pancake %}';
+                    obj.pancake.forEach((pancake) => {
+                        code = code + '{% slice %}';
+                        code = code + pancake.slice;
+                        code = code + '{% endslice %}';
+                    });
+                    code = code + '{% endpancake %}';
+                    return code;
                 },
                 toPreview: function(obj) {
                     console.log('toPreview');
