@@ -39,6 +39,36 @@
                     );
                 }
             });
+            CMS.registerEditorComponent({
+                id: "pancake",
+                label: "Pancake",
+                fields: [{
+                    name: 'pancake',
+                    label: 'Pancake',
+                    widget: 'list',
+                    fields: [{name: 'slice', label: 'Slice', widget: 'markdown' }]
+                }],
+                pattern: /{% pancake %}(.*){% endpancake %}/,
+                fromBlock: function(match) {
+                    //var contents = match[1];
+                    //var slices = contents.match(/{% slice %}(.*){% endslice %}/g)
+                    return {
+                        //pancake: match[1]
+                    };
+                },
+                toBlock: function(obj) {
+                    console.log('toBlock');
+                    console.log(obj);
+                    return '{% pancake %}{% endpancake %}';
+                },
+                toPreview: function(obj) {
+                    console.log('toPreview');
+                    console.log(obj);
+                    return (
+                        'no preview'
+                    );
+                }
+            });
         </script>
     </body>
 </html>
