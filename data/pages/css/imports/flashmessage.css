@@ -1,0 +1,16 @@
+div[message] {
+    position: fixed;
+    top: 1em;
+    background: var(--success-color);
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: -256px;
+    transition: margin-top 750ms cubic-bezier(0.840, -0.600, 0.180, 1.560);
+}
+
+div[message="flash"] {
+    margin-top: 0;
+}
