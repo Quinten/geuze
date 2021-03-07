@@ -8,6 +8,10 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addWatchTarget("./data/pages/css/imports/");
 
+    eleventyConfig.addShortcode('youtube', function(id) {
+        return `<img src="http://img.youtube.com/vi/${id}/maxresdefault.jpg" alt="Youtube Video"/>`;
+    });
+
     return {
         dir: {
             input: "data/pages",
