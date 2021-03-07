@@ -22,6 +22,8 @@ metadescription: The summary in search results
         {% include "../data/pages/css/imports/header.css" %}
         {% endset %}
         <style>{{ css | cssmin | safe }}</style>
+        <link rel="preload" href="/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/css/fonts.css"></noscript>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preload" href="{{ theming.googlefonturl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ theming.googlefonturl }}"></noscript>

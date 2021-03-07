@@ -1,8 +1,8 @@
 body > header img {
     display: block;
     width: auto;
-    height: 64px;
-    margin: 1em;
+    height: 3em;
+    margin: .5em 1em;
 }
 
 body > nav {
@@ -39,6 +39,11 @@ body > nav > ul > li > a:hover {
         display: flex;
         justify-content: space-between;
     }
+
+    body > header img {
+        height: 4em;
+        margin: 1em;
+    }
 }
 
 body > header > nav > ul > li,
@@ -69,6 +74,18 @@ body > a {
     display: none;
 }
 
+body > a:before {
+    content: "\f0c9";
+    font-family: 'geuze-icons';
+    font-size: 2em;
+    line-height: 1em;
+    display: block;
+}
+
+body > a span {
+    display: none;
+}
+
 @media screen and (max-width: 767px) {
 
     body > a {
@@ -85,7 +102,7 @@ body > a {
         background: var(--cta-color);
         flex-direction: column-reverse;
         justify-content: flex-end;
-        padding-top: 3em;
+        padding-top: 4em;
     }
 
     body > nav,
@@ -106,11 +123,7 @@ body > a {
     }
 
     body[menu="true"] > a:before {
-        content: 'Close';
-    }
-
-    body[menu="true"] > a span {
-        display: none;
+        content: "\f00d";
     }
 
     body > header > nav > ul > li > a[active="true"],

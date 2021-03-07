@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'geuze-icons';
+    src:
+        url('/fonts/geuze-icons.ttf?88zcus') format('truetype'),
+        url('/fonts/geuze-icons.woff?88zcus') format('woff'),
+        url('/fonts/geuze-icons.svg?88zcus#geuze-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
