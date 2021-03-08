@@ -85,6 +85,7 @@
                         }
                         if (/^youtube "(\S+)"$/.test(part)) {
                             node.content = node.content + '{% ' + part + ' %}';
+                            return;
                         }
                         if (level === 1) {
                             node.content = node.content + converter.makeMarkdown(part);
@@ -129,6 +130,7 @@
                             sliceCode = sliceCode.replace(/{% pancake %}/g, '<div pancake="deconstructed">');
                             sliceCode = sliceCode.replace(/{% slice %}/g, '<div>');
                             sliceCode = sliceCode.replace(/{% endpancake %}|{% endslice %}/g, '</div>');
+                            sliceCode = sliceCode.replace(/{% youtube "(\S+)" %}/g, '<img src="http://img.youtube.com/vi/Sp3dFF-Bts0/maxresdefault.jpg" alt="Youtube Video"/>');
                             sliceCode = converter.makeHtml(sliceCode);
                             code = code + '<div>';
                             code = code + sliceCode;
