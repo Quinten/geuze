@@ -111,7 +111,7 @@
                             sliceCode.replace(/{% slice %}/g, '<div>');
                             sliceCode.replace(/{% endpancake %}|{% endslice %}/g, '</div>');
                             code = code + '<div>';
-                            code = code + pancake.slice;
+                            code = code + sliceCode;
                             code = code + '</div>';
                         });
                     }
