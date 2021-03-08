@@ -28,5 +28,5 @@
     }
   ],
   "socialmediaintro": "### Stay up to date",
-  "footercontent": "{% pancake %}{% slice %}<h3 id=\"sitemap\">Sitemap</h3><p>one</p><p>two</p><p>three</p>{% endslice %}{% slice %}<h3 id=\"madewith\">Made with</h3><p><a href=\"https://www.11ty.dev/\">eleventy</a></p><p><a href=\"https://www.netlifycms.org/\">netlify CMS</a></p>{% endslice %}{% endpancake %}"
+  "footercontent": "### Made with\n\n[eleventy](https://www.11ty.dev/)\n\n[netlify CMS](https://www.netlifycms.org/)"
 }
