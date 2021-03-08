@@ -50,8 +50,6 @@
                 }],
                 pattern: /{% pancake %}(.*){% endpancake %}/,
                 fromBlock: function(match) {
-                    console.log('fromBlock');
-                    console.log(match);
                     let parts = match[1].split(/{% | %}/g);
                     let tree = {
                         content: "",
@@ -82,7 +80,6 @@
                         }
                         node.content = node.content + part;
                     });
-                    console.log(tree);
                     let pancake = [];
                     tree.children.forEach((child) => {
                         pancake.push({
