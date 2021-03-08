@@ -26,7 +26,5 @@
       "title": "The homepage of facebook... whatever",
       "url": "https://facebook.com"
     }
-  ],
-  "socialmediaintro": "### Stay up to date",
-  "footercontent": "### Made with\n\n[eleventy](https://www.11ty.dev/)\n\n[netlify CMS](https://www.netlifycms.org/)"
+  ]
 }

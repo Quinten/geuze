@@ -41,9 +41,13 @@ body > footer > div nav li {
     padding: 1em;
 }
 
-body > footer > div nav a {
+body > footer a {
     color: var(--body-color);
     text-decoration: none;
+}
+
+body > footer a:hover {
+    color: var(--muted-color);
 }
 
 [icon]:before {

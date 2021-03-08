@@ -48,15 +48,13 @@ metadescription: The summary in search results
             <div pancake="deconstructed">
                 {% if footer.socialmedialinks.length %}
                 <div grow="false">
-                    {% markdown %}{{ footer.socialmediaintro }}{% endmarkdown %}
+                    {% markdown %}{% include "../data/config/socialmediaintro.md" %}{% endmarkdown %}
                     <nav>
                         <ul>{% for link in footer.socialmedialinks %}<li><a href="{{ link.url }}" rel="me" title="{{ link.title }}"><span icon="{{ link.icon }}"></span></a></li>{% endfor %}</ul>
                     </nav>
                 </div>
                 {% endif %}
-                <div>
-                    {% markdown %}{{ footer.footercontent }}{% endmarkdown %}
-                </div>
+                <div>{% markdown %}{% include "../data/config/footercontent.md" %}{% endmarkdown %}</div>
             </div>
             <div>
                 <nav>

@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addPairedShortcode('markdown', function(content) {
-        return new MarkdownIt().render(content);
+        return new MarkdownIt({html: true}).render(content);
     });
 
     return {

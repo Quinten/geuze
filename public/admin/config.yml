@@ -79,12 +79,20 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}
+      - name: "footercontent"
+        label: "Footer Content"
+        file: "data/config/footercontent.md"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+      - name: "socialmediaintro"
+        label: "Social Media Intro"
+        file: "data/config/socialmediaintro.md"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
       - name: "footer"
         label: "Footer"
         file: "data/config/footer.json"
         fields:
-          - {label: "Footer Content", name: "footercontent", widget: "markdown"}
-          - {label: "Social Intro", name: "socialmediaintro", widget: "markdown"}
           - name: "socialmedialinks"
             label: "Social Media Links"
             widget: "list"
