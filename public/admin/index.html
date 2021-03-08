@@ -83,6 +83,9 @@
                             level = level - 1;
                             return;
                         }
+                        if (part.test(/^youtube "(\S+)"$/)) {
+                            node.content = node.content + '{% ' + part + ' %}';
+                        }
                         if (level === 1) {
                             node.content = node.content + converter.makeMarkdown(part);
                         } else {
