@@ -6,4 +6,6 @@ metadescription: Privacy policy.
 ---
 # Privacy Policy
 
-This website use only functional cookies for the moment.
+This website uses no cookies for the moment.
+
+{% youtube "W3ZHPJT2Kp4" %}
