@@ -52,10 +52,45 @@
                 fromBlock: function(match) {
                     console.log('fromBlock');
                     console.log(match);
-                    //var contents = match[1];
-                    //var slices = contents.match(/{% slice %}(.*){% endslice %}/g)
+                    let parts = match[1].split(/{% | %}/g);
+                    let tree = {
+                        content: "",
+                        parent: undefined,
+                        children: []
+                    };
+                    let node = tree;
+                    parts.forEach((part) => {
+                        if (part === '') {
+                            return;
+                        }
+                        if (part === 'slice' || part === 'pancake') {
+                            let newNode = {
+                                content: '',
+                                type: part,
+                                parent: node,
+                                children: []
+                            };
+                            node.content = node.content + '{% ' + part + ' %}';
+                            node.children.push(newNode);
+                            node = newNode;
+                            return;
+                        }
+                        if (part === 'endslice' || part === 'endpancake') {
+                            node.parent.content = node.parent.content + node.content + '{% ' + part + ' %}';
+                            node = node.parent;
+                            return;
+                        }
+                        node.content = node.content + part;
+                    });
+                    console.log(tree);
+                    let pancake = [];
+                    tree.children.forEach((child) => {
+                        pancake.push({
+                            slice: child.content
+                        });
+                    });
                     return {
-                        //pancake: match[1]
+                        pancake
                     };
                 },
                 toBlock: function(obj) {
@@ -71,11 +106,16 @@
                     return code;
                 },
                 toPreview: function(obj) {
-                    console.log('toPreview');
-                    console.log(obj);
-                    return (
-                        'no preview'
-                    );
+                    let code = '<div pancake="deconstructed">';
+                    if (obj.pancake) {
+                        obj.pancake.forEach((pancake) => {
+                            code = code + '<div>';
+                            code = code + pancake.slice;
+                            code = code + '</div>';
+                        });
+                    }
+                    code = code + '</div>';
+                    return code;
                 }
             });
         </script>
