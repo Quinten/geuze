@@ -1,0 +1,7 @@
+---
+permalink: "css/footer.css"
+---
+{% set css %}
+{% include "./imports/footer.css" %}
+{% endset %}
+{{ css | cssmin | safe }}
