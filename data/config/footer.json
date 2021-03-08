@@ -9,5 +9,24 @@
       "url": "/privacy/"
     }
   ],
-  "copyright": "© 2021 Geuze Developers"
+  "copyright": "© 2021 Geuze Developers",
+  "socialmedialinks": [
+    {
+      "title": "Fork this on github",
+      "url": "https://github.com/Quinten/geuze",
+      "icon": "github"
+    },
+    {
+      "title": "Follow the dev on twitter",
+      "url": "https://twitter.com/supernapie",
+      "icon": "youtube"
+    },
+    {
+      "icon": "facebook",
+      "title": "The homepage of facebook... whatever",
+      "url": "https://facebook.com"
+    }
+  ],
+  "socialmediaintro": "### Stay up to date",
+  "footercontent": "Footer content"
 }
