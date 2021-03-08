@@ -32,7 +32,6 @@ body > header {
     max-width: calc(960px + 2em);
 }
 
-[class="frame-content"] > main,
 body > main {
     width: calc(100% - 2em);
     max-width: 960px;
