@@ -8,9 +8,11 @@
     </head>
     <body>
         <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+        <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
         <script>
+            let converter = new showdown.Converter();
             CMS.registerPreviewStyle('/css/styles.css');
-            var BodyPreview = createClass({
+            let BodyPreview = createClass({
                 render: function() {
                     var entry = this.props.entry;
                     return h('main', {}, this.props.widgetFor('body'));
@@ -57,6 +59,7 @@
                         children: []
                     };
                     let node = tree;
+                    let level = 0;
                     parts.forEach((part) => {
                         if (part === '') {
                             return;
@@ -71,14 +74,20 @@
                             node.content = node.content + '{% ' + part + ' %}';
                             node.children.push(newNode);
                             node = newNode;
+                            level = level + 1;
                             return;
                         }
                         if (part === 'endslice' || part === 'endpancake') {
                             node.parent.content = node.parent.content + node.content + '{% ' + part + ' %}';
                             node = node.parent;
+                            level = level - 1;
                             return;
                         }
-                        node.content = node.content + part;
+                        if (level === 1) {
+                            node.content = node.content + converter.makeMarkdown(part);
+                        } else {
+                            node.content = node.content + part;
+                        }
                     });
                     let pancake = [];
                     tree.children.forEach((child) => {
@@ -95,7 +104,7 @@
                     if (obj.pancake) {
                         obj.pancake.forEach((pancake) => {
                             code = code + '{% slice %}';
-                            code = code + pancake.slice;
+                            code = code + converter.makeHtml(pancake.slice).replace('\n', '');
                             code = code + '{% endslice %}';
                         });
                     }
@@ -110,6 +119,7 @@
                             sliceCode = sliceCode.replace(/{% pancake %}/g, '<div pancake="deconstructed">');
                             sliceCode = sliceCode.replace(/{% slice %}/g, '<div>');
                             sliceCode = sliceCode.replace(/{% endpancake %}|{% endslice %}/g, '</div>');
+                            sliceCode = converter.makeHtml(sliceCode);
                             code = code + '<div>';
                             code = code + sliceCode;
                             code = code + '</div>';
