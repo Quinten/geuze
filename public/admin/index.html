@@ -107,9 +107,9 @@
                     if (obj.pancake) {
                         obj.pancake.forEach((pancake) => {
                             let sliceCode = pancake.slice;
-                            sliceCode.replace(/{% pancake %}/g, '<div pancake="deconstructed">');
-                            sliceCode.replace(/{% slice %}/g, '<div>');
-                            sliceCode.replace(/{% endpancake %}|{% endslice %}/g, '</div>');
+                            sliceCode = sliceCode.replace(/{% pancake %}/g, '<div pancake="deconstructed">');
+                            sliceCode = sliceCode.replace(/{% slice %}/g, '<div>');
+                            sliceCode = sliceCode.replace(/{% endpancake %}|{% endslice %}/g, '</div>');
                             code = code + '<div>';
                             code = code + sliceCode;
                             code = code + '</div>';
