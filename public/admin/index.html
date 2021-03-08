@@ -111,7 +111,7 @@
                                 sliceCode = sliceCode.replace(/\r\n|\n/g, '');
                             }
                             code = code + '{% slice %}';
-                            code = code + (sliceCode) ? sliceCode : '';
+                            code = code + ((sliceCode) ? sliceCode : '');
                             code = code + '{% endslice %}';
                         });
                     }
