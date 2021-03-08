@@ -1,4 +1,5 @@
 const CleanCSS = require('clean-css');
+const MarkdownIt = require('markdown-it');
 
 module.exports = function(eleventyConfig) {
 
@@ -18,6 +19,10 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPairedShortcode('slice', function(contents) {
         return `<div>${contents}</div>`;
+    });
+
+    eleventyConfig.addPairedShortcode('markdown', function(content) {
+        return new MarkdownIt().render(content);
     });
 
     return {

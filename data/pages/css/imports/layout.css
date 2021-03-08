@@ -41,6 +41,7 @@ body > main {
     display: flex;
     flex-wrap: wrap;
     margin: -1em;
+    align-items: stretch;
 }
 
 [pancake="deconstructed"] > div {
