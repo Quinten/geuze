@@ -83,7 +83,7 @@
                             level = level - 1;
                             return;
                         }
-                        if (part.test(/^youtube "(\S+)"$/)) {
+                        if (/^youtube "(\S+)"$/.test(part)) {
                             node.content = node.content + '{% ' + part + ' %}';
                         }
                         if (level === 1) {
