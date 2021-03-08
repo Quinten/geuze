@@ -104,7 +104,7 @@
                     if (obj.pancake) {
                         obj.pancake.forEach((pancake) => {
                             code = code + '{% slice %}';
-                            code = code + converter.makeHtml(pancake.slice).replace('\n', '');
+                            code = code + (pancake.slice) ? converter.makeHtml(pancake.slice).replace('\n', '') : '';
                             code = code + '{% endslice %}';
                         });
                     }
