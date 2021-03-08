@@ -103,8 +103,15 @@
                     let code = '{% pancake %}';
                     if (obj.pancake) {
                         obj.pancake.forEach((pancake) => {
+                            let sliceCode = pancake.slice;
+                            if (sliceCode) {
+                                sliceCode = converter.makeHtml(pancake.slice);
+                            }
+                            if (sliceCode) {
+                                sliceCode = sliceCode.replace(/\r\n|\n/g, '');
+                            }
                             code = code + '{% slice %}';
-                            code = code + (pancake.slice) ? converter.makeHtml(pancake.slice).replace('\n', '') : '';
+                            code = code + (sliceCode) ? sliceCode : '';
                             code = code + '{% endslice %}';
                         });
                     }
