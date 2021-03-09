@@ -48,7 +48,7 @@
                     if (description) {
                         description = description.replace(/\r\n|\n/g, '')
                     }
-                    return '{% card "' + obj.image + '" "' + obj.title + '" "' + obj.url + '" "' + obj.cta + '" %}' + description + '{% endcard %}';
+                    return '{% card "' + obj.image + '", "' + obj.title + '", "' + obj.url + '", "' + obj.cta + '" %}' + description + '{% endcard %}';
                 },
                 toPreview: function(obj) {
                     return (
