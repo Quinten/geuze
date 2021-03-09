@@ -1,3 +1,3 @@
 # geuze
 
-## Simple and fast website template with Netlify CMS and Eleventy
+Simple and fast website template with Netlify CMS and Eleventy
