@@ -125,7 +125,7 @@
                             level = level - 1;
                             return;
                         }
-                        if (/^youtube "(\S+)"$/.test(part)) {
+                        if (/^youtube "(\S+)"$/.test(part) || /^card "/.test(part) || /^endcard$/.test(part)) {
                             node.content = node.content + '{% ' + part + ' %}';
                             return;
                         }
@@ -172,6 +172,7 @@
                             sliceCode = sliceCode.replace(/{% pancake %}/g, '<div pancake="deconstructed">');
                             sliceCode = sliceCode.replace(/{% slice %}/g, '<div>');
                             sliceCode = sliceCode.replace(/{% endpancake %}|{% endslice %}/g, '</div>');
+                            sliceCode = sliceCode.replace(/{% card "(.*)", "(.*)", "(.*)", "(.*)" %}(.*){% endcard %}/g, '<div card="true"><a href="$3"><img src="$1" alt="$2" loading="lazy"></a><strong><a href="$3">$2</a></strong><p>$5</p><a href="$3" button="funnel">$4</a></div>');
                             sliceCode = sliceCode.replace(/{% youtube "(\S+)" %}/g, '<img src="http://img.youtube.com/vi/$1/maxresdefault.jpg" alt="Youtube Video"/>');
                             sliceCode = converter.makeHtml(sliceCode);
                             code = code + '<div>';
