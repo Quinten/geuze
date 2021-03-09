@@ -33,7 +33,7 @@
                     {name: 'cta', label: 'CTA', widget: 'string'},
                     {name: 'description', label: 'Description', widget: 'text'}
                 ],
-                pattern: /^{% card "(\S+)", "(\S+)", "(\S+)", "(\S+)" %}(\S+){% endcard %}$/,
+                pattern: /^{% card "(.*)", "(.*)", "(.*)", "(.*)" %}(.*){% endcard %}$/,
                 fromBlock: function(match) {
                     return {
                         image: match[1],
