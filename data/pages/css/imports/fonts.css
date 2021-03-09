@@ -8,3 +8,11 @@
     font-style: normal;
     font-display: swap;
 }
+
+[icon]:before {
+    font-family: 'geuze-icons';
+    font-size: 1.5em;
+    line-height: 1.5em;
+    display: block;
+    content: attr(icon);
+}
