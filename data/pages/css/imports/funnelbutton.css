@@ -1,0 +1,19 @@
+[button="funnel"] {
+    border: 1px var(--funnel-color) solid;
+    background: var(--funnel-color);
+    color: var(--funnel-text-color);
+    height: 3em;
+    line-height: 3em;
+    font-size: inherit;
+    padding: 0 2em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+[button="funnel"]:hover {
+    border: 1px var(--funnel-hover-color) solid;
+    background: var(--funnel-hover-color);
+    color: var(--funnel-text-color);
+}

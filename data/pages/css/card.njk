@@ -1,0 +1,8 @@
+---
+permalink: "css/card.css"
+---
+{% set css %}
+{% include "./imports/card.css" %}
+{% include "./imports/funnelbutton.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

@@ -1,0 +1,35 @@
+[card] {
+    padding: 1em;
+    border: 1px var(--muted-bg) solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+[card] img {
+    display: block;
+    width: 100%;
+    margin: 0 0 1em 0;
+}
+
+[card] > strong {
+    display: block;
+    margin: 0 0 1em 0;
+}
+
+[card] > strong > a {
+    text-decoration: none;
+}
+
+[card] > p {
+    margin: 0 0 1em 0;
+}
+
+[card] [button] {
+    margin: auto 0 0 0;
+}
+
+[card] > a:not([button]) {
+    align-self: stretch;
+}
