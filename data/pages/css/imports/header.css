@@ -82,10 +82,6 @@ body > a:before {
     display: block;
 }
 
-body > a span {
-    display: none;
-}
-
 @media screen and (max-width: 767px) {
 
     body > a {
