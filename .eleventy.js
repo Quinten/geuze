@@ -25,6 +25,17 @@ module.exports = function(eleventyConfig) {
         return new MarkdownIt({html: true}).render(content);
     });
 
+    eleventyConfig.addPairedShortcode('card', function(contents, image, title, url, cta) {
+        let a = (url !== undefined && url !== 'undefined') ? `<a href="${url}">` : '';
+        let ae = (url !== undefined && url !== 'undefined') ? `</a>` : '';
+        let t = (title !== undefined && title !== 'undefined') ? title : '';
+        let i = (image !== undefined && image !== 'undefined') ? `${a}<img src="${image}" alt="${t}" loading="lazy" />${ae}` : '';
+        t = (title !== undefined && title !== 'undefined') ? `<strong>${a}${t}${ae}</strong>` : '';
+        let p = (contents !== undefined && contents !== 'undefined') ? `<p>${contents}</p>` : '';
+        let b = (url !== undefined && url !== 'undefined' && cta !== undefined && cta !== 'undefined') ? `<a href="${url}" button="funnel">${cta}</a>` : '';
+        return `<div card="true">${i}${t}${p}${b}</div>`;
+    });
+
     return {
         dir: {
             input: "data/pages",
