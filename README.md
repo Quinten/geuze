@@ -10,3 +10,11 @@
 ### Demo
 
 Check the demo at https://geuze.netlify.app/
+
+### Ready to start your own Geuze site?
+
+<p>
+    <a href="https://app.netlify.com/start/deploy?repository=https://github.com/Quinten/geuze&stack=cms">
+        <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify">
+    </a>
+</p>
