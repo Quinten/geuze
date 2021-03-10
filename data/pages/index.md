@@ -19,8 +19,4 @@ Well, you can have the cake and eat it! Or should we say have the bear and drink
 
 It will only take a minute.
 
-[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Quinten/geuze&amp;stack=cms)
-
-### Source code
-
-You don't have to use Netlify, if you don't want to (although the contact form won't work properly). If you have your own server, you can fork this project [on github](https://github.com/Quinten/geuze).
+[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Quinten/geuze&stack=cms)
