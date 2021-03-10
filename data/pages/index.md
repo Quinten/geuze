@@ -1,15 +1,26 @@
 ---
 type: system
 layout: layout.njk
-title: Home
-metadescription: This is the meta description of the home page. Good for SEO. It
-  is not visible on the frontend, but will appear as a summary in search
-  results.
+title: Geuze - Simple and fast website template
+metadescription: What if you could have the speed of a static website AND the
+  flexibility of a content management system?
 ---
-# This is the homepage!
+# Geuze
 
-You can change it as much as you want, but you can't delete, because bad things will happen.
+## Simple and fast website template with Netlify CMS and Eleventy
 
-## Source code
+What if you could have the ***speed*** of a static website AND the ***flexibility*** of a content management system?
 
-Fork this project [on github](https://github.com/Quinten/geuze)
+Well, you can have the cake and eat it! Or should we say have the bear and drink it...
+
+## Getting started
+
+### Deploy a Geuze site right now
+
+It will only take a minute.
+
+[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Quinten/geuze&amp;stack=cms)
+
+### Source code
+
+You don't have to use Netlify, if you don't want to (although the contact form won't work properly). If you have your own server, you can fork this project [on github](https://github.com/Quinten/geuze).
