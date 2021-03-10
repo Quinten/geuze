@@ -17,3 +17,9 @@ Nest wysiwyg editors in each other, to create responsive columns.
 ## Youtube
 
 {% pancake %}{% slice %}<p>{% youtube "p6h-rYSVX90" %}</p>{% endslice %}{% slice %}<p>Adding a youtube video is really easy. Just supply the id of the video to the widget and the widget takes care of the rest. It is responsive and can be put into a pancake.</p>{% endslice %}{% endpancake %}
+
+## Cards
+
+{% pancake %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "Read more" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus.{% endcard %}</p>{% endslice %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "Read more" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus. Phasellus lacinia lectus dignissim, fermentum tortor in, hendrerit est.{% endcard %}</p>{% endslice %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "Read more" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus.{% endcard %}</p>{% endslice %}{% endpancake %}
+
+{% pancake %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "Read more" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus.{% endcard %}</p>{% endslice %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "Read more" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus. Phasellus lacinia lectus dignissim, fermentum tortor in, hendrerit est.{% endcard %}</p>{% endslice %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "Read more" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus.{% endcard %}</p>{% endslice %}{% endpancake %}
