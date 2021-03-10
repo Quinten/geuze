@@ -11,7 +11,7 @@ metadescription: What if you could have the speed of a static website AND the
 
 What if you could have the ***speed*** of a static website AND the ***flexibility*** of a content management system?
 
-Well, you can have the cake and eat it! Or should we say have the bear and drink it...
+Well, you can have the cake and eat it! Or should we say have the beer and drink it...
 
 ## Getting started
 
