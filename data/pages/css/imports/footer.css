@@ -21,6 +21,10 @@ body > footer > div[pancake=deconstructed] {
     margin-bottom: 1em;
 }
 
+body > footer > div[pancake=deconstructed] > div {
+    margin: 1em;
+}
+
 body > footer > div[pancake=deconstructed] nav {
     margin-left: -1em;
 }

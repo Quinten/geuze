@@ -1,5 +1,6 @@
 const CleanCSS = require('clean-css');
 const MarkdownIt = require('markdown-it');
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function(eleventyConfig) {
 
@@ -34,6 +35,13 @@ module.exports = function(eleventyConfig) {
         let p = (description !== undefined && description !== 'undefined') ? `<p>${description}</p>` : '';
         let b = (url !== undefined && url !== 'undefined' && cta !== undefined && cta !== 'undefined') ? `<a href="${url}" button="funnel">${cta}</a>` : '';
         return `<div card="true">${i}${t}${p}${b}</div>`;
+    });
+
+    eleventyConfig.addPlugin(lazyImagesPlugin, {
+        imgSelector: 'main img, footer img',
+        appendInitScript: false,
+        preferNativeLazyLoad: true,
+        transformImgPath: (imgPath) => imgPath.replace('/media/', './public/media/')
     });
 
     return {
