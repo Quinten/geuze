@@ -2,7 +2,8 @@
 type: custom
 layout: layout.njk
 title: Widgets
-metadescription: This is a page with examples of the different kind of widgets.
+metadescription: This is a page with examples of widgets, that have been
+  developed for this template on top of the widgets provided by Netlify CMS.
 ---
 # Widgets
 
