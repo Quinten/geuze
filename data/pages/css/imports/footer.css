@@ -49,3 +49,10 @@ body > footer a {
 body > footer a:hover {
     color: var(--muted-color);
 }
+
+body > footer strong {
+    font-family: var(--heading-font);
+    display: block;
+    font-size: 1.17em;
+    margin: 1em 0;
+}
