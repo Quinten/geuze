@@ -7,7 +7,7 @@ metadescription: This is a page with examples of widgets, that have been
 ---
 # Widgets
 
-This is a page with examples of the different kind of widgets.
+This is a page with examples of widgets, that have been developed for this template on top of the widgets provided by Netlify CMS.
 
 ## Pancake
 
