@@ -1,1 +1,1 @@
-## Stay up to date
+**Stay up to date**
