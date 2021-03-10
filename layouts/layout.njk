@@ -65,6 +65,7 @@ metadescription: The summary in search results
         </footer>
         <a href="javascript:(e=>document.querySelector('body').setAttribute('menu', document.querySelector('body').getAttribute('menu') !== 'true'))()" title="Menu"></a>
         <script type="module" src="/js/styles.js"></script>
+        {% if page.url == '/' %}
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         <script>
             if (window.netlifyIdentity) {
@@ -77,5 +78,6 @@ metadescription: The summary in search results
                 });
             }
         </script>
+        {% endif %}
     </body>
 </html>
