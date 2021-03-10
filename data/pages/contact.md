@@ -13,4 +13,4 @@ labelemail: Email
 labelmessage: Message
 labelbutton: Send
 ---
-Set up a notification in the netlfiy forms tab to receive email updates from this form... More details [here](https://docs.netlify.com/forms/setup/).
+Set up a notification in the netlfiy forms tab to receive email updates from this form... More details in [the Netlify documentation](https://docs.netlify.com/forms/setup/).
