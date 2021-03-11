@@ -2,8 +2,14 @@
 title: Post
 metadescription: Post
 layout: layout.njk
-date: 2021-03-11T20:46:01.069Z 
+date: 2021-03-11T20:46:01.069Z
+poster:
 ---
-<h1>{{ title }}</h1>
-<p><strong>{{ page.date.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}) }}</strong></p>
-{{ content | safe }}
+<article>
+    {% if poster %}
+    <img src="{{ poster }}" alt="{{ title }}" />
+    {% endif %}
+    <h1>{{ title }}</h1>
+    <p><strong>{{ page.date.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}) }}</strong></p>
+    {{ content | safe }}
+</article>
