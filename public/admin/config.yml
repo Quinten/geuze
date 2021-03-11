@@ -55,14 +55,15 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "posts"
     label: "Posts"
-    folder: "data/pages/posts"
+    folder: "data/pages/blog"
     create: true
     slug: "{{slug}}"
     filter: {field: "type", value: "post"}
     fields:
       - {label: "Tags", name: "tags", widget: "hidden", default: "post"}
       - {label: "Type", name: "type", widget: "hidden", default: "post"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layout.njk"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post.njk"}
+      - {label: "Poster", name: "poster", widget: "image"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Meta description", name: "metadescription", widget: "text"}
       - {label: "Publication Date", name: "date", widget: "datetime"}
