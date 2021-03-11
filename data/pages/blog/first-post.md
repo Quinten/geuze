@@ -2,6 +2,7 @@
 tags: post
 type: post
 layout: post.njk
+poster: /media/first-post-poster.jpg
 title: First post
 metadescription: the meta
 date: 2021-03-11T20:46:01.069Z
