@@ -14,6 +14,7 @@ pagination:
 {% for post in posts %}
   {% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}) }}</strong></p><p>{{ post.data.metadescription }}{% endcard %}
 {% endfor %}
+{% if pagination.pages.length > 1 %}
 <nav aria-labelledby="pagination">
   <h2 id="pagination">Pages</h2>
   <ul>
@@ -34,3 +35,4 @@ pagination:
 {%- endfor %}
   </ul>
 </nav>
+{% endif %}
