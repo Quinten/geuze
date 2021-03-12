@@ -25,16 +25,14 @@
             let PostPreview = createClass({
                 render: function() {
                     let entry = this.props.entry;
-                    console.log('date entry', entry.getIn(['data', 'date']));
-                    console.log('date widget', this.props.widgetFor('date'));
                     return h('main', {},
                         h('article', {},
-                            this.props.widgetFor('poster'),
+                            h('img', {src: this.props.getAsset(entry.getIn(['data', 'poster']).toString())}),
                             h('h1', {}, entry.getIn(['data', 'title'])),
                             h('p', {},
-                                h('strong', {}, entry.getIn(['data', 'date']))
+                                h('strong', {}, this.props.widgetFor('date').props.value.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}))
                             ),
-                            this.props.widgetFor('body')
+                            h('div', {}, this.props.widgetFor('body'))
                         )
                     )
                 }
