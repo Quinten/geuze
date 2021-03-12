@@ -14,7 +14,6 @@
             CMS.registerPreviewStyle('/css/preview.css');
             let BodyPreview = createClass({
                 render: function() {
-                    var entry = this.props.entry;
                     return h('main', {}, this.props.widgetFor('body'));
                 }
             });
@@ -22,6 +21,25 @@
             CMS.registerPreviewTemplate('home', BodyPreview);
             CMS.registerPreviewTemplate('contact', BodyPreview);
             CMS.registerPreviewTemplate('404', BodyPreview);
+
+            let PostPreview = createClass({
+                render: function() {
+                    let entry = this.prop.entry;
+                    console.log('date entry', entry.getIn(['data', 'date']));
+                    console.log('date widget', this.props.widgetFor('date'));
+                    return h('main', {},
+                        h('article', {},
+                            this.props.widgetFor('poster'),
+                            h('h1', {}, entry.getIn(['data', 'title'])),
+                            h('p', {},
+                                h('strong', {}, entry.getIn(['data', 'date']))
+                            ),
+                            this.props.widgetFor('body')
+                        )
+                    )
+                }
+            });
+            CMS.registerPreviewTemplate('posts', PostPreview);
 
             CMS.registerEditorComponent({
                 id: "card",
