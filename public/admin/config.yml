@@ -16,6 +16,15 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Meta description", name: "metadescription", widget: "text"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - name: "bloglist"
+        label: "Blog list"
+        file: "data/pages/blog/index.md"
+        fields:
+          - {label: "Type", name: "type", widget: "hidden", default: "system"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "blog.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Meta description", name: "metadescription", widget: "text"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - name: "contact"
         label: "Contact Page"
         file: "data/pages/contact.md"
