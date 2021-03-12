@@ -11,5 +11,6 @@ poster:
     {% endif %}
     <h1>{{ title }}</h1>
     <p><strong>{{ page.date.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}) }}</strong></p>
+    <p>{{ metadescription }}</p>
     {{ content | safe }}
 </article>

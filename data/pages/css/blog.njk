@@ -1,0 +1,9 @@
+---
+permalink: "css/blog.css"
+---
+{% set css %}
+{% include "./imports/card.css" %}
+{% include "./imports/blog.css" %}
+{% include "./imports/pagination.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

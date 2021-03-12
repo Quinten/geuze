@@ -1,0 +1,36 @@
+---
+title: Blog
+metadescription: Collection of blogposts
+layout: layout.njk
+pagination:
+  data: collections.post
+  size: 8
+  alias: posts
+  reverse: true
+---
+<h1>{{ title }}</h1>
+{{ content | safe }}
+<link rel="stylesheet" href="/css/blog.css">
+{% for post in posts %}
+  {% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}) }}</strong></p><p>{{ post.data.metadescription }}{% endcard %}
+{% endfor %}
+<nav aria-labelledby="pagination">
+  <h2 id="pagination">Pages</h2>
+  <ul>
+{%- for pageEntry in pagination.pages %}
+    {% if page.url == pagination.hrefs[ loop.index0 ] %}
+    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}" aria-current="page"><span>Page </span>{{ loop.index }}</a></li>
+    {% elseif pagination.href.first == pagination.hrefs[ loop.index0 ] %}
+    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"><span>Page </span>{{ loop.index }}</a></li>
+    {% elseif pagination.href.previous == pagination.hrefs[ loop.index0 ] %}
+    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"><span>Page </span>{{ loop.index }}</a></li>
+    {% elseif pagination.href.next == pagination.hrefs[ loop.index0 ] %}
+    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"><span>Page </span>{{ loop.index }}</a></li>
+    {% elseif pagination.href.last == pagination.hrefs[ loop.index0 ] %}
+    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"><span>Page </span>{{ loop.index }}</a></li>
+    {% else %}
+    <li aria-hidden="true">...</li>
+    {% endif %}
+{%- endfor %}
+  </ul>
+</nav>
