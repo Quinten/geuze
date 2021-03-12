@@ -24,7 +24,7 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "blog.njk"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Meta description", name: "metadescription", widget: "text"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
       - name: "contact"
         label: "Contact Page"
         file: "data/pages/contact.md"
