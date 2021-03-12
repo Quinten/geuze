@@ -24,7 +24,7 @@
 
             let PostPreview = createClass({
                 render: function() {
-                    let entry = this.prop.entry;
+                    let entry = this.props.entry;
                     console.log('date entry', entry.getIn(['data', 'date']));
                     console.log('date widget', this.props.widgetFor('date'));
                     return h('main', {},
