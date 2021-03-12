@@ -30,7 +30,7 @@
                             h('img', {src: ((entry.getIn(['data', 'poster'])) ? this.props.getAsset(entry.getIn(['data', 'poster']).toString()) : 'http://placehold.it/992x320')}),
                             h('h1', {}, entry.getIn(['data', 'title'])),
                             h('p', {},
-                                h('strong', {}, this.props.widgetFor('date').props.value.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}))
+                                h('strong', {}, ((this.props.widgetFor('date')) ? this.props.widgetFor('date').props.value.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}) : ''))
                             ),
                             h('div', {}, this.props.widgetFor('body'))
                         )
