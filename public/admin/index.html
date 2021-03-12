@@ -27,7 +27,7 @@
                     let entry = this.props.entry;
                     return h('main', {},
                         h('article', {},
-                            h('img', {src: this.props.getAsset(entry.getIn(['data', 'poster']).toString())}),
+                            h('img', {src: ((this.props.getAsset(entry.getIn(['data', 'poster']))) ? this.props.getAsset(entry.getIn(['data', 'poster']).toString()) : '')}),
                             h('h1', {}, entry.getIn(['data', 'title'])),
                             h('p', {},
                                 h('strong', {}, this.props.widgetFor('date').props.value.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}))
