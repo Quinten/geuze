@@ -2,6 +2,5 @@
 type: system
 layout: blog.njk
 title: Blog
-metadescription: the meta
+metadescription: Follow up on the latest news.
 ---
-Lorem ipsum et dolor sit amet...
