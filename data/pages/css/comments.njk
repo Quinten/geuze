@@ -1,0 +1,8 @@
+---
+permalink: "css/comments.css"
+---
+{% set css %}
+{% include "./imports/form.css" %}
+{% include "./imports/flashmessage.css" %}
+{% endset %}
+{{ css | cssmin | safe }}
