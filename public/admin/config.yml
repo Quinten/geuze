@@ -81,16 +81,19 @@ collections:
     label: "Comments"
     editor:
       preview: false
-    file: "data/config/comments.json"
-    widget: "list"
-    fields:
-      - {label: "Id", name: "id", widget: "hidden"}
-      - {label: "Created", name: "created_at", widget: "string"}
-      - {label: "Status", name: "status", widget: "select", options: ["pending", "approved", "refused"]}
-      - {label: "Page", name: "page", widget: "string"}
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Email", name: "email", widget: "string"}
-      - {label: "Comment", name: "comment", widget: "text"}
+    files:
+      - name: "commentsfile"
+        label: "Comments"
+        file: "data/config/comments.json"
+        widget: "list"
+        fields:
+          - {label: "Id", name: "id", widget: "hidden"}
+          - {label: "Created", name: "created_at", widget: "string"}
+          - {label: "Status", name: "status", widget: "select", options: ["pending", "approved", "refused"]}
+          - {label: "Page", name: "page", widget: "string"}
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Comment", name: "comment", widget: "text"}
   - name: "config"
     label: "Config"
     editor:
