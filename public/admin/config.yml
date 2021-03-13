@@ -81,6 +81,8 @@ collections:
     label: "Comments"
     folder: "data/config/comments"
     extension: "json"
+    editor:
+      preview: false
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Page", name: "page", widget: "hidden"}
