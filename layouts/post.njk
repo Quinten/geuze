@@ -23,7 +23,7 @@ labelbutton: Submit
 <link rel="stylesheet" href="/css/comments.css">
 <h2>Comments</h2>
 <div>
-    <form name="comments" method="POST" data-netlify="true" action="./?success=yes" netlify-honeypot="dob" required-message="{{ requiredmessage }}" success-message="{{ successmessage }}">
+    <form name="comments" method="POST" data-netlify="true" action="{{ page.url }}?success=yes" netlify-honeypot="dob" required-message="{{ requiredmessage }}" success-message="{{ successmessage }}">
         <input type="hidden" name="page" value="{{ page.url }}">
         <label for="name">{{ labelname }}</label>
         <input type="text" name="name" id="name">
