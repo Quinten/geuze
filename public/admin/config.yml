@@ -80,7 +80,7 @@ collections:
   - name: "comments"
     label: "Comments"
     folder: "data/config/comments"
-    slug: "{{slug}}"
+    extension: "json"
     fields:
       - {label: "Last Update", name: "updated_at", widget: "hidden"}
       - name: "commentslist"
