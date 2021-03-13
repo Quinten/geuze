@@ -82,7 +82,7 @@ collections:
     folder: "data/config/comments"
     extension: "json"
     fields:
-      - {label: "Title", name: "title", widget: "hidden"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Page", name: "page", widget: "hidden"}
       - {label: "Last Update", name: "updated_at", widget: "hidden"}
       - name: "commentslist"
