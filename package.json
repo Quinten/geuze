@@ -1,11 +1,11 @@
 {
   "name": "geuze",
   "version": "0.0.1",
-  "description": "",
+  "description": "Simple and fast website template with Netlify CMS and Eleventy",
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "node pregenerate.js && eleventy"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "clean-css": "^5.1.1",
-    "eleventy-plugin-lazyimages": "^2.1.0"
+    "eleventy-plugin-lazyimages": "^2.1.0",
+    "netlify": "^6.1.16"
   }
 }
