@@ -48,6 +48,18 @@ let handler = async (event, context) => {
     }
 
     let comments = await getJson(`https://api.netlify.com/api/v1/forms/${form_id}/submissions?access_token=${process.env.NETLIFY_ACCESS_TOKEN}`);
+    let {page} = event.queryStringParameters;
+    if (page !== undefined) {
+        let toRemove = [];
+        comments.forEach(comment => {
+            if (comment.data.page !== page) {
+                toRemove.push(comment);
+            }
+        });
+        toRemove.forEach(comment => {
+            comments.splice(comments.indexOf(comment), 1);
+        });
+    }
     return {
         statusCode: 200,
         body: JSON.stringify(comments)
