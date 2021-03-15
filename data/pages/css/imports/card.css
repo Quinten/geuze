@@ -34,3 +34,11 @@
     margin: auto 0 0 0;
     align-self: center;
 }
+
+[wrap="cards"] [card] {
+    margin-bottom: 1em;
+}
+
+[wrap="cards"] [card] p:last-child {
+    margin-bottom: 0;
+}

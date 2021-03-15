@@ -217,10 +217,11 @@
                     return '{% recentposts "' + obj.nposts + '" %}';
                 },
                 toPreview: function(obj) {
-                    let html = '';
+                    let html = '<div wrap="cards">';
                     for (let i = 0; i < obj.nposts; i++) {
                         html = html + '<div card="true"><strong><a href="/blog/">Lorem ipsum</a></strong><p><strong>January 25, 1983</strong></p><p>Lorem ipsum et dolor sit amet.</p></div>';
                     }
+                    html = html + '</div>';
                     return html;
                 }
             });
