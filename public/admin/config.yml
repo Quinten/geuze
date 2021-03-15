@@ -103,6 +103,11 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}
+      - name: "comments"
+        label: "Comments"
+        file: "data/config/comments.json"
+        fields:
+          - {label: "Enable comments", name: "enabled", widget: "boolean", default: false}
       - name: "footercontent"
         label: "Footer Content"
         file: "data/config/footercontent.md"
