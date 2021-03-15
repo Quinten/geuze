@@ -207,14 +207,14 @@
                 id: "recentposts",
                 label: "Recent posts",
                 fields: [{name: 'nposts', label: 'Number of posts', widget: 'number', default: 3, value_type: 'int', min: 1}],
-                pattern: /^{% recentposts "(\S+)" %}$/,
+                pattern: /^<div wrap="code">{% for post in collections.post \| reverse %}{% if loop.index0 < (\S+) %}{% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date.toLocaleDateString\('en', {year: 'numeric', month: 'long', day: 'numeric'}\) }}<\/strong><\/p><p>{{ post.data.metadescription }}{% endcard %}{% endif %}{% endfor %}<\/div>$/,
                 fromBlock: function(match) {
                     return {
                         nposts: match[1]
                     };
                 },
                 toBlock: function(obj) {
-                    return '{% recentposts "' + obj.nposts + '" %}';
+                    return `<div wrap="code">{% for post in collections.post | reverse %}{% if loop.index0 < ${obj.nposts} %}{% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}) }}</strong></p><p>{{ post.data.metadescription }}{% endcard %}{% endif %}{% endfor %}</div>`;
                 },
                 toPreview: function(obj) {
                     let html = '<div wrap="cards">';
