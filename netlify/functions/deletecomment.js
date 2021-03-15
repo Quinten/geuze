@@ -2,7 +2,7 @@ let https = require('https');
 
 let deleteCall = (url) => {
     return new Promise((resFunc, rejFunc) => {
-        https.request(url, {method: 'DELETE'}, res => {
+        let rq = https.request(url, {method: 'DELETE'}, res => {
             res.setEncoding('utf8');
             let body = '';
             res.on('data', data => {
@@ -13,6 +13,8 @@ let deleteCall = (url) => {
                 resFunc(body);
             });
         });
+        rq.on('error', rejFunc);
+        rq.end();
     });
 };
 
