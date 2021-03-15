@@ -42,7 +42,7 @@ fetch('/.netlify/functions/comments?slug=' + form.getAttribute('name').replace('
                                     flashmessage('Comment deleted!');
                                 }
                                 if (data.error) {
-                                    flashmessage(data.error);
+                                    flashmessage(data.error, true);
                                 }
                             })
                             .catch(console.error);

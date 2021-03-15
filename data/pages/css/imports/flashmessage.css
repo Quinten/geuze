@@ -11,6 +11,10 @@ div[message] {
     transition: margin-top 750ms cubic-bezier(0.840, -0.600, 0.180, 1.560);
 }
 
+div[message][error] {
+    background: var(--error-color);
+}
+
 div[message="flash"] {
     margin-top: 0;
 }

@@ -1,7 +1,10 @@
-let flashmessage = (message) => {
+let flashmessage = (message, error) => {
     let el = document.createElement('div');
     el.innerText = message;
     el.setAttribute('message', 'hidden');
+    if (error !== undefined) {
+        el.setAttribute('error', true);
+    }
     document.querySelector('body').appendChild(el);
     setTimeout(() => {
         el.setAttribute('message', 'flash');
