@@ -2,6 +2,7 @@
 title: Contact
 metadescription: Contact us
 layout: layout.njk
+enabled: false
 requiredmessage: This field is required.
 successmessage: The message has been send. You'll hear from us soon.
 labelfirstname: Firstname
@@ -11,6 +12,7 @@ labelmessage: Message
 labelbutton: Send
 ---
 <h1>{{ title }}</h1>
+{% if enabled %}
 <link rel="stylesheet" href="/css/contact.css">
 <div pancake="deconstructed">
     <div>
@@ -35,3 +37,6 @@ labelbutton: Send
     </div>
 </div>
 <script type="module" src="/js/contact.js"></script>
+{% else %}
+    {{ content | safe }}
+{% endif %}

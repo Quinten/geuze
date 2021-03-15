@@ -20,10 +20,11 @@ labelnocomments: No comment yet. Be the first.
     <p>{{ metadescription }}</p>
     {{ content | safe }}
 </article>
+{% if comments.enabled %}
 <link rel="stylesheet" href="/css/comments.css">
 <h2>Comments</h2>
 <div id="comments-list">
-    <p>{{ labelnocomments}}</p>
+    <p>{{ labelnocomments }}</p>
 </div>
 <h3>New comment</h3>
 <div>
@@ -40,4 +41,4 @@ labelnocomments: No comment yet. Be the first.
     </form>
 </div>
 <script type="module" src="/js/comments.js"></script>
-
+{% endif %}
