@@ -35,7 +35,7 @@ let handler = async (event, context) => {
     let {user} = context.clientContext;
     return {
         statusCode: 200,
-        body: JSON.stringify(user)
+        body: JSON.stringify({user})
     };
 
 
