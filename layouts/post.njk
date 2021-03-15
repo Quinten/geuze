@@ -25,6 +25,7 @@ labelnocomments: No comment yet. Be the first.
 <div id="comments-list">
     <p>{{ labelnocomments}}</p>
 </div>
+<h3>New comment</h3>
 <div>
     <form name="comments-{{ page.fileSlug }}" method="POST" data-netlify="true" action="{{ page.url }}?success=yes" netlify-honeypot="dob" required-message="{{ requiredmessage }}" success-message="{{ successmessage }}">
         <label for="name">{{ labelname }}</label>
