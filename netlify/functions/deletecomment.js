@@ -9,7 +9,6 @@ let deleteCall = (url) => {
                 body += data;
             });
             res.on('end', () => {
-                body = JSON.parse(body);
                 resFunc(body);
             });
         });
@@ -54,7 +53,7 @@ let handler = async (event, context) => {
 
     return {
         statusCode: 200,
-        body: JSON.stringify({success: true})
+        body: JSON.stringify({success: true, response})
     };
 };
 
