@@ -26,5 +26,3 @@ Nest wysiwyg editors in each other, to create responsive columns.
 {% pancake %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "More lorem" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus.{% endcard %}</p>{% endslice %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "More lorem" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus. Phasellus lacinia lectus dignissim, fermentum tortor in, hendrerit est.{% endcard %}</p>{% endslice %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "More lorem" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus.{% endcard %}</p>{% endslice %}{% endpancake %}
 
 ## Recent posts
-
-{% recentposts "3" %}
