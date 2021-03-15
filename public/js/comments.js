@@ -1,7 +1,7 @@
 import validate from './validate.js';
 import flashmessage from './flashmessage.js';
 
-let form = document.querySelector('form[name="comments"]');
+let form = document.querySelector('form[name^="comments"]');
 
 validate(form);
 
