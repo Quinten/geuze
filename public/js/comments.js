@@ -9,7 +9,7 @@ let cacheBust = '';
 
 if (window.location.search.indexOf('success=yes') > -1) {
     flashmessage(form.getAttribute('success-message'));
-    cacheBust = 'bust=' + Math.random();
+    cacheBust = '&bust=' + Math.random();
 }
 
 fetch('/.netlify/functions/comments?slug=' + form.getAttribute('name').replace('comments-', '') + cacheBust)
