@@ -77,27 +77,6 @@ collections:
       - {label: "Meta description", name: "metadescription", widget: "text"}
       - {label: "Publication Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "comments"
-    label: "Comments"
-    folder: "data/config/comments"
-    extension: "json"
-    editor:
-      preview: false
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Page", name: "page", widget: "hidden"}
-      - {label: "Last Update", name: "updated_at", widget: "hidden"}
-      - name: "commentslist"
-        label: "Comments"
-        widget: "list"
-        fields:
-          - {label: "Id", name: "id", widget: "hidden"}
-          - {label: "Created", name: "created_at", widget: "string"}
-          - {label: "Status", name: "status", widget: "select", options: ["pending", "approved", "refused"]}
-          - {label: "Page", name: "page", widget: "string"}
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
-          - {label: "Comment", name: "comment", widget: "text"}
   - name: "config"
     label: "Config"
     editor:
