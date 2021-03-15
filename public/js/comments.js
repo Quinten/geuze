@@ -5,11 +5,14 @@ let form = document.querySelector('form[name^="comments-"]');
 
 validate(form);
 
+let cacheBust = '';
+
 if (window.location.search.indexOf('success=yes') > -1) {
     flashmessage(form.getAttribute('success-message'));
+    cacheBust = 'bust=' + Math.random();
 }
 
-fetch('/.netlify/functions/comments?slug=' + form.getAttribute('name').replace('comments-', ''))
+fetch('/.netlify/functions/comments?slug=' + form.getAttribute('name').replace('comments-', '') + cacheBust)
     .then(response => response.json())
     .then(comments => {
         if (comments && comments.length) {
