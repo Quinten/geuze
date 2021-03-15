@@ -44,6 +44,10 @@ module.exports = function(eleventyConfig) {
         transformImgPath: (imgPath) => imgPath.replace('/media/', './public/media/')
     });
 
+    eleventyConfig.addFilter('blogdateformat', function(value) {
+        return value.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'});
+    });
+
     return {
         dir: {
             input: "data/pages",
