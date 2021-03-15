@@ -206,7 +206,7 @@
             CMS.registerEditorComponent({
                 id: "recentposts",
                 label: "Recent posts",
-                fields: [{name: 'nposts', label: 'Number of posts', widget: 'default', default: 3, value_type: 'int', min: 1}],
+                fields: [{name: 'nposts', label: 'Number of posts', widget: 'number', default: 3, value_type: 'int', min: 1}],
                 pattern: /^{% recentposts "(\S+)" %}$/,
                 fromBlock: function(match) {
                     return {
