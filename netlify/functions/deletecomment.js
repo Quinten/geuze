@@ -37,7 +37,7 @@ let handler = async (event, context) => {
     if (user === undefined) {
         return {
             statusCode: 200,
-            body: JSON.stringify({error: 'user is undefined'})
+            body: JSON.stringify({error: 'User is undefined. Try logging in again.'})
         };
     }
 

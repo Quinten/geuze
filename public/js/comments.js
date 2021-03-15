@@ -41,6 +41,9 @@ fetch('/.netlify/functions/comments?slug=' + form.getAttribute('name').replace('
                                 if (data.success) {
                                     flashmessage('Comment deleted!');
                                 }
+                                if (data.error) {
+                                    flashmessage(data.error);
+                                }
                             })
                             .catch(console.error);
                         let card = element.parentElement.parentElement;
