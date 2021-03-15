@@ -4,12 +4,6 @@ metadescription: Post
 layout: layout.njk
 date: 2021-03-11T20:46:01.069Z
 poster:
-requiredmessage: This field is required.
-successmessage: Comment was posted.
-labelname: Name
-labelcomment: Comment
-labelbutton: Submit
-labelnocomments: No comment yet. Be the first.
 ---
 <article>
     {% if poster %}
@@ -22,21 +16,21 @@ labelnocomments: No comment yet. Be the first.
 </article>
 {% if comments.enabled %}
 <link rel="stylesheet" href="/css/comments.css">
-<h2>Comments</h2>
+<h2>{{ comments.title }}</h2>
 <div id="comments-list">
-    <p>{{ labelnocomments }}</p>
+    <p>{{ comments.labelnocomments }}</p>
 </div>
-<h3>New comment</h3>
+<h3>{{ comments.labelnewcomment }}</h3>
 <div>
-    <form name="comments-{{ page.fileSlug }}" method="POST" data-netlify="true" action="{{ page.url }}?success=yes" netlify-honeypot="dob" required-message="{{ requiredmessage }}" success-message="{{ successmessage }}">
-        <label for="name">{{ labelname }}</label>
+    <form name="comments-{{ page.fileSlug }}" method="POST" data-netlify="true" action="{{ page.url }}?success=yes" netlify-honeypot="dob" required-message="{{ comments.requiredmessage }}" success-message="{{ comments.successmessage }}">
+        <label for="name">{{ comments.labelname }}</label>
         <input type="text" name="name" id="name">
         <label for="dob">Date of birth</label>
         <input type="text" name="dob" id="dob">
-        <label for="comment">{{ labelcomment }}</label>
+        <label for="comment">{{ comments.labelcomment }}</label>
         <textarea name="comment" id="comment"></textarea>
         <div>
-            <button type="submit">{{ labelbutton }}</button>
+            <button type="submit">{{ comments.labelbutton }}</button>
         </div>
     </form>
 </div>
