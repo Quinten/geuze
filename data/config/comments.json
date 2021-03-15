@@ -1,3 +1,11 @@
 {
-  "enabled": true
+  "enabled": true,
+  "successmessage": "Comment posted.",
+  "labelbutton": "Submit",
+  "requiredmessage": "This field is required.",
+  "labelnocomments": "No comments yet. Be the first.",
+  "labelcomment": "Comment",
+  "labelnewcomment": "New comment",
+  "title": "Comments",
+  "labelname": "Name"
 }
