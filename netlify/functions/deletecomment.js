@@ -22,14 +22,14 @@ let handler = async (event, context) => {
     if (process.env.NETLIFY_ACCESS_TOKEN === undefined) {
         return {
             statusCode: 200,
-            body: JSON.stringify({})
+            body: JSON.stringify({error: 'No NETLIFY_ACCESS_TOKEN set in environment'})
         };
     }
 
     if (process.env.SITE_ID === undefined) {
         return {
             statusCode: 200,
-            body: JSON.stringify({})
+            body: JSON.stringify({error: 'No SITE_ID set in environment'})
         };
     }
 
@@ -37,7 +37,7 @@ let handler = async (event, context) => {
     if (user === undefined) {
         return {
             statusCode: 200,
-            body: JSON.stringify({})
+            body: JSON.stringify({error: 'user is undefined'})
         };
     }
 
@@ -45,7 +45,7 @@ let handler = async (event, context) => {
     if (id === undefined) {
         return {
             statusCode: 200,
-            body: JSON.stringify({})
+            body: JSON.stringify({error: 'id is undefined'})
         };
     }
 
