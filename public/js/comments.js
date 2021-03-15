@@ -19,7 +19,7 @@ fetch('/.netlify/functions/comments?slug=' + form.getAttribute('name').replace('
             let html = '';
             comments.reverse();
             comments.forEach(comment => {
-                html = html + `<div card="true"><p><strong>${comment.name}</strong> - <em>${(new Date(comment.created_at)).toLocaleDateString('en', {year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric'})}</em></p><p>${comment.comment.replace(/\n|\r\n/g, '<br>').replace('/(https?:\/\/\S+)/g', '<a href="$1" target="_blank">$1</a>')}</p></div>`;
+                html = html + `<div card="true"><p><strong>${comment.name}</strong> - <em>${(new Date(comment.created_at)).toLocaleDateString('en', {year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric'})}</em></p><p>${comment.comment.replace(/\n|\r\n/g, '<br>').replace(/(https?:\/\/\S+)/g, '<a href="$1" target="_blank">$1</a>')}</p></div>`;
             });
             document.getElementById('comments-list').innerHTML = html;
         }
