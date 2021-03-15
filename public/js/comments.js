@@ -17,6 +17,7 @@ fetch('/.netlify/functions/comments?slug=' + form.getAttribute('name').replace('
     .then(comments => {
         if (comments && comments.length) {
             let html = '';
+            comments.reverse();
             comments.forEach(comment => {
                 html = html + `<div card="true"><p><strong>${comment.name}</strong> - <em>${(new Date(comment.created_at)).toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'})}</em></p><p>${comment.comment}</p></div>`;
             });

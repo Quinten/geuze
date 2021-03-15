@@ -5,3 +5,8 @@
 [card] p:last-child {
     margin-bottom: 0;
 }
+
+article,
+#comments-list {
+    margin-bottom: 2em;
+}
