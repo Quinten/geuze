@@ -18,7 +18,7 @@ if (token !== null) {
     token = JSON.parse(token);
     if (token.token && token.token.access_token) {
         token = token.token.access_token;
-        deleteHtml = '- <a href="javascript:void(0)" delete-comment="$1">delete</a>';
+        deleteHtml = ' - <a href="javascript:void(0)" delete-comment="$1">delete</a>';
     }
 }
 
