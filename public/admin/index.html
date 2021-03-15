@@ -202,6 +202,28 @@
                     return code;
                 }
             });
+
+            CMS.registerEditorComponent({
+                id: "recentposts",
+                label: "Recent posts",
+                fields: [{name: 'nposts', label: 'Number of posts', widget: 'default', default: 3, value_type: 'int', min: 1}],
+                pattern: /^{% recentposts "(\S+)" %}$/,
+                fromBlock: function(match) {
+                    return {
+                        nposts: match[1]
+                    };
+                },
+                toBlock: function(obj) {
+                    return '{% recentposts "' + obj.nposts + '" %}';
+                },
+                toPreview: function(obj) {
+                    let html = '';
+                    for (let i = 0; i < obj.nposts; i++) {
+                        html = html + '<div card="true"><strong><a href="/blog/">Lorem ipsum</a></strong><p><strong>January 25, 1983</strong></p><p>Lorem ipsum et dolor sit amet.</p></div>';
+                    }
+                    return html;
+                }
+            });
         </script>
     </body>
 </html>

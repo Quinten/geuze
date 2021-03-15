@@ -14,6 +14,14 @@ module.exports = function(eleventyConfig) {
         return `<div iframe="responsive"><iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Youtube video"></iframe></div>`;
     });
 
+    eleventyConfig.addShortcode('recentposts', function(nposts) {
+        let html = '';
+        for (let i = 0; i < nposts; i++) {
+            html = html + '<div card="true"><strong><a href="/blog/">Lorem ipsum</a></strong><p><strong>January 25, 1983</strong></p><p>Lorem ipsum et dolor sit amet.</p></div>';
+        }
+        return html;
+    });
+
     eleventyConfig.addPairedShortcode('pancake', function(contents) {
         return `<div pancake="deconstructed">${contents}</div>`;
     });
