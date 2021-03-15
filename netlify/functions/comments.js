@@ -56,9 +56,21 @@ let handler = async (event, context) => {
     }
 
     let comments = await getJson(`https://api.netlify.com/api/v1/forms/${form_id}/submissions?access_token=${process.env.NETLIFY_ACCESS_TOKEN}`);
+
+    let filteredComments = [];
+    comments.forEach(comment => {
+        let filtered = {
+            id: comment.id,
+            created_at: comment.created_at,
+            name: comment.data.name.replace(/(<([^>]+)>)/ig, ''),
+            comment: comment.data.comment.replace(/(<([^>]+)>)/ig, '')
+        };
+        filteredComments.push(filtered);
+    });
+
     return {
         statusCode: 200,
-        body: JSON.stringify(comments)
+        body: JSON.stringify(filteredComments)
     };
 };
 

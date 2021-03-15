@@ -7,9 +7,9 @@ poster:
 requiredmessage: This field is required.
 successmessage: Comment was posted.
 labelname: Name
-labelemail: Email
 labelcomment: Comment
 labelbutton: Submit
+labelnocomments: No comment yet. Be the first.
 ---
 <article>
     {% if poster %}
@@ -22,6 +22,9 @@ labelbutton: Submit
 </article>
 <link rel="stylesheet" href="/css/comments.css">
 <h2>Comments</h2>
+<div id="comments-list">
+    <p>{{ labelnocomments}}</p>
+</div>
 <div>
     <form name="comments-{{ page.fileSlug }}" method="POST" data-netlify="true" action="{{ page.url }}?success=yes" netlify-honeypot="dob" required-message="{{ requiredmessage }}" success-message="{{ successmessage }}">
         <label for="name">{{ labelname }}</label>
