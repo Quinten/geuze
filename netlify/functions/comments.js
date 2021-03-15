@@ -32,11 +32,19 @@ let handler = async (event, context) => {
         };
     }
 
+    let {slug} = event.queryStringParameters;
+    if (slug === undefined) {
+        return {
+            statusCode: 200,
+            body: JSON.stringify([])
+        };
+    }
+
     let forms = await getJson(`https://api.netlify.com/api/v1/sites/${process.env.SITE_ID}/forms?access_token=${process.env.NETLIFY_ACCESS_TOKEN}`);
 
     let form_id = undefined;
     forms.forEach(form => {
-        if (form.name === 'comments') {
+        if (form.name === 'comments-' + slug) {
             form_id = form.id;
         }
     });
@@ -48,18 +56,6 @@ let handler = async (event, context) => {
     }
 
     let comments = await getJson(`https://api.netlify.com/api/v1/forms/${form_id}/submissions?access_token=${process.env.NETLIFY_ACCESS_TOKEN}`);
-    let {page} = event.queryStringParameters;
-    if (page !== undefined) {
-        let toRemove = [];
-        comments.forEach(comment => {
-            if (comment.data.page !== page) {
-                toRemove.push(comment);
-            }
-        });
-        toRemove.forEach(comment => {
-            comments.splice(comments.indexOf(comment), 1);
-        });
-    }
     return {
         statusCode: 200,
         body: JSON.stringify(comments)
