@@ -33,11 +33,12 @@ let handler = async (event, context) => {
     }
 
     let {user} = context.clientContext;
-    return {
-        statusCode: 200,
-        body: JSON.stringify({user})
-    };
-
+    if (user === undefined) {
+        return {
+            statusCode: 200,
+            body: JSON.stringify({})
+        };
+    }
 
     let {id} = event.queryStringParameters;
     if (id === undefined) {
