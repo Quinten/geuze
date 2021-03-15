@@ -109,6 +109,14 @@ collections:
         file: "data/config/comments.json"
         fields:
           - {label: "Enable comments", name: "enabled", widget: "boolean", default: false, hint: 'Remember to set a NETLIFY_ACCESS_TOKEN environment variable in your Netlify build settings.'}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Label no comments", name: "labelnocomments", widget: "string"}
+          - {label: "Label new comment", name: "labelnewcomment", widget: "string"}
+          - {label: "Required message", name: "requiredmessage", widget: "string"}
+          - {label: "Success message", name: "successmessage", widget: "string"}
+          - {label: "Label name", name: "labelname", widget: "string"}
+          - {label: "Label comment", name: "labelcomment", widget: "string"}
+          - {label: "Label button", name: "labelbutton", widget: "string"}
       - name: "footercontent"
         label: "Footer Content"
         file: "data/config/footercontent.md"
