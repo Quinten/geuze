@@ -34,6 +34,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Meta description", name: "metadescription", widget: "text"}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Enable form", name: "enabled", widget: "boolean", default: true, hint: 'Remember to setup email notifications under the Netlify Dashboard form settings.'}
           - {label: "Field required message", name: "requiredmessage", widget: "string"}
           - {label: "Success Message", name: "successmessage", widget: "string"}
           - {label: "Label Firstname", name: "labelfirstname", widget: "string"}
@@ -107,7 +108,7 @@ collections:
         label: "Comments"
         file: "data/config/comments.json"
         fields:
-          - {label: "Enable comments", name: "enabled", widget: "boolean", default: false}
+          - {label: "Enable comments", name: "enabled", widget: "boolean", default: false, hint: 'Remember to set a NETLIFY_ACCESS_TOKEN environment variable in your Netlify build settings.'}
       - name: "footercontent"
         label: "Footer Content"
         file: "data/config/footercontent.md"
