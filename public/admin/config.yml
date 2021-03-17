@@ -177,3 +177,10 @@ collections:
           - label: "Favicon"
             name: "favicon"
             widget: "image"
+          - name: "manifest"
+            label: "Manifest"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Short Name", name: "short_name", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
