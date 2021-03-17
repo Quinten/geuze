@@ -4,9 +4,9 @@ let theming = require('./data/config/theming.json');
 let source = 'public' + theming.favicon;
 let configuration = {
     path: "/",
-    appName: null,
-    appShortName: null,
-    appDescription: null,
+    appName: theming.manifest.name,
+    appShortName: theming.manifest.short_name,
+    appDescription: theming.manifest.description,
     developerName: null,
     developerURL: null,
     background: theming.colors['body-bg'],
