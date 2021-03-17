@@ -18,5 +18,10 @@
     "heading-font": "'Josefin Slab', serif;"
   },
   "googlefonturl": "https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap",
-  "favicon": "/media/favicon.svg"
+  "favicon": "/media/favicon.svg",
+  "manifest": {
+    "name": "Geuze",
+    "short_name": "Geuze",
+    "description": "Simple and fast website template"
+  }
 }
