@@ -104,6 +104,12 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}
+              - name: "sublinks"
+                label: "Sublinks"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Url", name: "url", widget: "string"}
       - name: "comments"
         label: "Comments"
         file: "data/config/comments.json"
