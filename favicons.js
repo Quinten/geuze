@@ -17,11 +17,11 @@ let configuration = {
     scope: '/',
     start_url: '/',
     icons: {
-        android: true,
-        appleIcon: true,
+        android: ["android-chrome-192x192.png"],
+        appleIcon: ["apple-touch-icon-152x152.png", "apple-touch-icon-167x167.png", "apple-touch-icon-180x180.png"],
         appleStartup: false,
         coast: false,
-        favicons: true,
+        favicons: ["favicon-32x32.png", "favicon.ico"],
         firefox: false,
         windows: false,
         yandex: false
@@ -33,14 +33,23 @@ let callback = (error, response) => {
         console.log(error.message); // Error description e.g. "An unknown error has occurred"
         return;
     }
-    //console.log(response.images);   // Array of { name: string, contents: <buffer> }
-    //console.log(response.files);    // Array of { name: string, contents: <string> }
-    //console.log(response.html);     // Array of strings (html elements)
     response.images.forEach((file) => {
         fs.writeFile('public/' + file.name, file.contents, error => {if (error !== null) { console.log(error); }});
     });
     response.files.forEach((file) => {
-        fs.writeFile('public/' + file.name, file.contents, error => {if (error !== null) { console.log(error); }});
+        let contents = JSON.parse(file.contents);
+        if (contents && contents.icons) {
+            let toRemove = [];
+            contents.icons.forEach(icon => {
+                if (icon.sizes !== '192x192') {
+                    toRemove.push(icon);
+                }
+            });
+            toRemove.forEach(icon => {
+                contents.icons.splice(contents.icons.indexOf(icon), 1);
+            });
+        }
+        fs.writeFile('public/' + file.name, JSON.stringify(contents), error => {if (error !== null) { console.log(error); }});
     });
     fs.writeFile('data/config/faviconmeta.json', JSON.stringify(response.html), error => {if (error !== null) { console.log(error); }});
 };

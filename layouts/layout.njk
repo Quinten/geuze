@@ -27,9 +27,7 @@ metadescription: The summary in search results
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preload" href="{{ theming.googlefonturl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ theming.googlefonturl }}"></noscript>
-        {% for favicon in faviconmeta %}
-        {{ favicon | safe }}
-        {% endfor %}
+        {% for favicon in faviconmeta %}{{ favicon | safe }}{% endfor %}
     </head>
     <body>
         <header>
