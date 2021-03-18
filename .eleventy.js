@@ -1,5 +1,7 @@
 const CleanCSS = require('clean-css');
 const MarkdownIt = require('markdown-it');
+const MarkdownItAnchor = require('markdown-it-anchor');
+const MarkdownLib = MarkdownIt({ html: true }).use(MarkdownItAnchor);
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function(eleventyConfig) {
@@ -47,6 +49,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter('blogdateformat', function(value) {
         return value.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'});
     });
+
+    eleventyConfig.setLibrary('md', MarkdownLib);
 
     return {
         dir: {
