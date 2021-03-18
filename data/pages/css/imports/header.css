@@ -10,7 +10,7 @@ body > nav {
     background: var(--cta-color);
 }
 
-body > nav > ul {
+body > nav ul {
     width: 100%;
     max-width: calc(960px + 2em);
     margin: 0 auto;
@@ -23,8 +23,8 @@ body > header > nav > ul {
     margin: 0;
 }
 
-body > nav > ul > li > a[active="true"],
-body > nav > ul > li > a:hover {
+body > nav > ul li a[active="true"],
+body > nav > ul li a:hover {
     background: var(--cta-hover-color);
 }
 
@@ -47,12 +47,12 @@ body > nav > ul > li > a:hover {
 }
 
 body > header > nav > ul > li,
-body > nav > ul > li {
+body > nav ul li {
     display: block;
 }
 
 body > header > nav > ul > li > a,
-body > nav > ul > li > a {
+body > nav ul > li > a {
     display: block;
     padding: 1em;
     text-decoration: none;
@@ -67,6 +67,33 @@ body > nav > ul > li > a {
 
     body > header > nav > ul > li > a:hover {
         color: var(--muted-color);
+    }
+
+    body > nav > ul > li {
+        position: relative;
+    }
+
+    body > nav > ul > li > ul {
+        background: var(--cta-hover-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: auto;
+        white-space: nowrap;
+        display: none;
+    }
+
+    body > nav > ul > li:hover {
+        background: var(--cta-hover-color);
+    }
+
+    body > nav > ul > li:hover > ul {
+        display: block;
+    }
+
+    body > nav > ul > li > ul > li > a[active="true"],
+    body > nav > ul > li > ul > li >a:hover {
+        background: var(--cta-color);
     }
 }
 
@@ -120,6 +147,10 @@ body > a:before {
 
     body[menu="true"] > a:before {
         content: "\f00d";
+    }
+
+    body > nav > ul > li > ul > li > a {
+        padding-left: 2em;
     }
 
     body > header > nav > ul > li > a[active="true"],

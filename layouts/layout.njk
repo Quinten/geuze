@@ -39,7 +39,7 @@ metadescription: The summary in search results
             </nav>
         </header>
         <nav>
-            <ul>{% for link in nav.links %}<li><a href="{{ link.url }}"{% if link.url == page.url %} active="true"{% endif %}>{{ link.title }}</a></li>{% endfor %}</ul>
+            <ul>{% for link in nav.links %}<li><a href="{{ link.url }}"{% if link.url == page.url %} active="true"{% endif %}>{{ link.title }}</a>{% if link.sublinks.length %}<ul>{% for sublink in link.sublinks %}<li><a href="{{ sublink.url }}"{% if sublink.url == page.url %} active="true"{% endif %}>{{ sublink.title }}</a></li>{% endfor %}</ul>{% endif %}</li>{% endfor %}</ul>
         </nav>
         <main>
             {{ content | safe }}
