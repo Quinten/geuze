@@ -10,7 +10,25 @@
     },
     {
       "title": "Widgets",
-      "url": "/widgets/"
+      "url": "/widgets/",
+      "sublinks": [
+        {
+          "title": "Pancake",
+          "url": "/widgets/#pancake"
+        },
+        {
+          "title": "Youtube",
+          "url": "/widgets/#youtube"
+        },
+        {
+          "title": "Cards",
+          "url": "/widgets/#cards"
+        },
+        {
+          "title": "Recent posts",
+          "url": "/widgets/#recent-posts"
+        }
+      ]
     },
     {
       "title": "About",
