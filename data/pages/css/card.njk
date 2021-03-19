@@ -2,7 +2,7 @@
 permalink: "css/card.css"
 ---
 {% set css %}
-{% include "./imports/card.css" %}
-{% include "./imports/funnelbutton.css" %}
+{% include "./imports/modules/card.css" %}
+{% include "./imports/modules/funnelbutton.css" %}
 {% endset %}
 {{ css | cssmin | safe }}
