@@ -1,6 +1,8 @@
 ---
 title: Geuze
 metadescription: The summary in search results
+ogtype: website
+poster: false
 ---
 <!doctype html>
 <html lang="en">
@@ -28,6 +30,19 @@ metadescription: The summary in search results
         <link rel="preload" href="{{ theming.googlefonturl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ theming.googlefonturl }}"></noscript>
         {% for favicon in faviconmeta %}{{ favicon | safe }}{% endfor %}
+        <meta name="author" content="{{ opengraph.author }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="{{ opengraph.twitter }}">
+        {% set ogimage %}{% if poster %}{{ poster }}{% else %}{{ opengraph.defaultimage }}{% endif %}{% endset %}
+        <meta property="og:image:width" content="{{ ogimage | imagewidth }}">
+        <meta property="og:image:height" content="{{ ogimage | imageheight }}">
+        <meta property="og:image:type" content="{{ ogimage | imagetype }}">
+        <meta property="og:image" content="{{ env.URL }}{{ ogimage }}">
+        <meta property="fb:app_id" content="{{ opengraph.fbappid }}">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:type" content="{{ ogtype }}">
+        <meta property="og:url" content="{{ env.URL }}{{ page.url }}">
+        <meta property="og:description" content="{{ metadescription }}">
     </head>
     <body>
         <header>

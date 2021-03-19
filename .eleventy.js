@@ -3,8 +3,32 @@ const MarkdownIt = require('markdown-it');
 const MarkdownItAnchor = require('markdown-it-anchor');
 const MarkdownLib = MarkdownIt({ html: true }).use(MarkdownItAnchor);
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
+const sizeOf = require('image-size');
 
 module.exports = function(eleventyConfig) {
+
+    eleventyConfig.addFilter('imagewidth', function (img) {
+        try {
+            return sizeOf('./public' + img).width;
+        } catch (e) {
+            return 0;
+        }
+    });
+
+    eleventyConfig.addFilter('imageheight', function (img) {
+        try {
+            return sizeOf('./public' + img).height;
+        } catch (e) {
+            return 0;
+        }
+    });
+
+    eleventyConfig.addFilter('imagetype', function (img) {
+        if (/png$/.test(img)) {
+            return 'image/png';
+        }
+        return 'image/jpeg';
+    });
 
     eleventyConfig.addFilter('cssmin', function(code) {
         return new CleanCSS({}).minify(code).styles;
