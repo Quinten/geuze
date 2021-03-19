@@ -15,6 +15,7 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "layout.njk"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Meta description", name: "metadescription", widget: "text"}
+          - {label: "Og image", name: "poster", widget: "image", required: false}
           - {label: "Body", name: "body", widget: "markdown"}
       - name: "bloglist"
         label: "Blog list"
@@ -24,6 +25,7 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "blog.njk"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Meta description", name: "metadescription", widget: "text"}
+          - {label: "Og image", name: "poster", widget: "image", required: false}
           - {label: "Body", name: "body", widget: "markdown", required: false}
       - name: "contact"
         label: "Contact Page"
@@ -33,6 +35,7 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "layout.njk"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Meta description", name: "metadescription", widget: "text"}
+          - {label: "Og image", name: "poster", widget: "image", required: false}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Enable form", name: "enabled", widget: "boolean", default: true, hint: 'Remember to setup email notifications under the Netlify Dashboard form settings.'}
           - {label: "Field required message", name: "requiredmessage", widget: "string"}
@@ -50,6 +53,7 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "layout.njk"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Meta description", name: "metadescription", widget: "text"}
+          - {label: "Og image", name: "poster", widget: "image", required: false}
           - {label: "Body", name: "body", widget: "markdown"}
   - name: "custompages"
     label: "Custom Pages"
@@ -62,6 +66,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layout.njk"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Meta description", name: "metadescription", widget: "text"}
+      - {label: "Og image", name: "poster", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "posts"
     label: "Posts"
