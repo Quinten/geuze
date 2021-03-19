@@ -76,6 +76,7 @@ body > nav ul > li > a {
     body > nav > ul > li > ul {
         background: var(--cta-hover-color);
         position: absolute;
+        z-index: 1;
         top: 100%;
         left: 0;
         width: auto;
