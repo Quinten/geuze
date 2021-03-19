@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: var(--main-font);
+    background: var(--body-bg);
+    color: var(--body-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+p:empty {
+    display: none;
+}
+
+a {
+    color: var(--cta-color);
+}
+
+a:hover {
+    color: var(--cta-hover-color);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

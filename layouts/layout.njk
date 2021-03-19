@@ -11,19 +11,7 @@ poster: false
         <title>{{ title }}</title>
         <meta name="description" content="{{ metadescription }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% set css %}
-        :root {
-        {% for name, color in theming.colors %}
-        --{{ name }}: {{ color }};
-        {% endfor %}
-        {% for name, font in theming.fonts %}
-        --{{ name }}: {{ font | safe }};
-        {% endfor %}
-        }
-        {% include "../data/pages/css/imports/layout.css" %}
-        {% include "../data/pages/css/imports/header.css" %}
-        {% endset %}
-        <style>{{ css | cssmin | safe }}</style>
+        <style>{% include "../data/pages/css/critical.njk" %}</style>
         <link rel="preload" href="/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/css/fonts.css"></noscript>
         <link rel="preconnect" href="https://fonts.gstatic.com">

@@ -59,6 +59,10 @@ body > nav ul > li > a {
     color: var(--cta-text-color);
 }
 
+body > header > nav > ul > li > a:hover,
+body > nav ul > li > a:hover {
+    color: var(--cta-text-color);
+}
 @media screen and (min-width: 768px) {
 
     body > header > nav > ul > li > a {

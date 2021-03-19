@@ -1,0 +1,14 @@
+{% set css %}
+:root {
+{% for name, color in theming.colors %}
+--{{ name }}: {{ color }};
+{% endfor %}
+{% for name, font in theming.fonts %}
+--{{ name }}: {{ font | safe }};
+{% endfor %}
+}
+{% include "./imports/base.css" %}
+{% include "./imports/layout.css" %}
+{% include "./imports/header.css" %}
+{% endset %}
+{{ css | cssmin | safe }}
