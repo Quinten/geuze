@@ -197,4 +197,4 @@ collections:
           - {label: "Author", name: "author", widget: "string"}
           - {label: "Twitter", name: "twitter", widget: "string"}
           - {label: "Default Image", name: "defaultimage", widget: "image"}
-          - {label: "Facebook app id", name: "fbappid", widget: "image"}
+          - {label: "Facebook app id", name: "fbappid", widget: "string"}
