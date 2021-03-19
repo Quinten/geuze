@@ -32,3 +32,16 @@
         document.body.appendChild(script);
     }
 })('main img, footer img', 'https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js', true);
+
+(function () {
+    var links = document.querySelectorAll('nav a')
+    for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        var href = link.getAttribute('href');
+        if (href.indexOf('#') > -1 && href.indexOf(window.location.pathname) > -1) {
+            link.addEventListener('click', function (e) {
+                document.querySelector('body').setAttribute('menu', false);
+            });
+        }
+    }
+})();
