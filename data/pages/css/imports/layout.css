@@ -1,3 +1,5 @@
+/* wrapping and sticky footer */
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,16 +7,23 @@ body {
     min-height: 100vh;
 }
 
-body > header {
+.page-header {
     width: 100%;
     max-width: calc(960px + 2em);
 }
 
-body > main {
+.page-main {
     width: calc(100% - 2em);
     max-width: 960px;
     margin-bottom: 3em;
 }
+
+.page-footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* pancake columns */
 
 [pancake="deconstructed"] {
     display: flex;
