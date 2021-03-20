@@ -1,0 +1,15 @@
+[pancake="deconstructed"] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5em;
+    align-items: stretch;
+}
+
+[pancake="deconstructed"] > div {
+    flex: 1 1 200px;
+    margin: .5em;
+}
+
+[pancake="deconstructed"] > div[grow="false"] {
+    flex: 0 1 384px;
+}

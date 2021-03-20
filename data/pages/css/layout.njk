@@ -8,10 +8,12 @@
 {% endfor %}
 }
 {% include "./imports/base.css" %}
-{% include "./imports/layout.css" %}
-{% include "./imports/header.css" %}
-{% include "./imports/footer.css" %}
+{% include "./imports/modules/page.css" %}
+{% include "./imports/modules/header.css" %}
+{% include "./imports/modules/footer.css" %}
+{% include "./imports/modules/pancake.css" %}
 {% include "./imports/modules/card.css" %}
 {% include "./imports/modules/funnelbutton.css" %}
+{% include "./imports/modules/embed.css" %}
 {% endset %}
 {{ css | cssmin | safe }}
