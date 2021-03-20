@@ -7,18 +7,18 @@ body {
     min-height: 100vh;
 }
 
-.page-header {
+.page__header {
     width: 100%;
     max-width: calc(960px + 2em);
 }
 
-.page-main {
+.page__main {
     width: calc(100% - 2em);
     max-width: 960px;
     margin-bottom: 3em;
 }
 
-.page-footer {
+.page__footer {
     width: 100%;
     margin-top: auto;
 }

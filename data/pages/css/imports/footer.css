@@ -1,4 +1,4 @@
-.page-footer {
+.page__footer {
     background: var(--muted-bg);
     display: flex;
     flex-direction: column;
