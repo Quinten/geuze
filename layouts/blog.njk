@@ -2,6 +2,7 @@
 title: Blog
 metadescription: Collection of blogposts
 layout: layout.njk
+substyles: blog
 pagination:
   data: collections.post
   size: 8
@@ -10,7 +11,6 @@ pagination:
 ---
 <h1>{{ title }}</h1>
 {{ content | safe }}
-<link rel="stylesheet" href="/css/blog.css">
 {% for post in posts %}
   {% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}) }}</strong></p><p>{{ post.data.metadescription }}{% endcard %}
 {% endfor %}

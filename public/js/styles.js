@@ -1,13 +1,3 @@
-(function () {
-    if (document.querySelector('[card]')) {
-        var head  = document.getElementsByTagName('head')[0];
-        var link  = document.createElement('link');
-        link.rel  = 'stylesheet';
-        link.href = '/css/card.css';
-        head.appendChild(link);
-    }
-})();
-
 (function (selector, src, preferNativeLazyLoad) {
     var images = document.querySelectorAll(selector);
     var numImages = images.length;

@@ -3,6 +3,7 @@ title: Geuze
 metadescription: The summary in search results
 ogtype: website
 poster: false
+substyles: false
 ---
 <!doctype html>
 <html lang="en">
@@ -11,7 +12,8 @@ poster: false
         <title>{{ title }}</title>
         <meta name="description" content="{{ metadescription }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>{% include "../data/pages/css/critical.njk" %}</style>
+        <style>{% include "../data/pages/css/layout.njk" %}</style>
+        {% if substyles %}<style>{% include "../data/pages/css/" + substyles + ".njk" %}</style>{% endif %}
         <link rel="preload" href="/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/css/fonts.css"></noscript>
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -47,7 +49,6 @@ poster: false
         <main class="page__main">
             {{ content | safe }}
         </main>
-        <link rel="stylesheet" href="/css/footer.css">
         <footer class="page__footer">
             <div pancake="deconstructed">
                 {% if footer.socialmedialinks.length %}

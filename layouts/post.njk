@@ -3,7 +3,8 @@ title: Post
 metadescription: Post
 layout: layout.njk
 date: 2021-03-11T20:46:01.069Z
-poster:
+poster: false
+substyles: post
 ---
 <article>
     {% if poster %}
@@ -15,7 +16,6 @@ poster:
     {{ content | safe }}
 </article>
 {% if comments.enabled %}
-<link rel="stylesheet" href="/css/comments.css">
 <h2>{{ comments.title }}</h2>
 <div id="comments-list">
     <p>{{ comments.labelnocomments }}</p>

@@ -1,1 +1,4 @@
-data/pages/css/critical.njk
+data/pages/css/layout.njk
+data/pages/css/contact.njk
+data/pages/css/blog.njk
+data/pages/css/post.njk
