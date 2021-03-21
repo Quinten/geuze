@@ -49,23 +49,23 @@ substyles: false
         <main class="page__main">
             {{ content | safe }}
         </main>
-        <footer class="page__footer">
-            <div pancake="deconstructed">
+        <footer class="page__footer footer">
+            <div class="pancake footer__top">
                 {% if footer.socialmedialinks.length %}
-                <div grow="false">
+                <div class="pancake__slice pancake__slice--no-grow">
                     {% markdown %}{% include "../data/config/socialmediaintro.md" %}{% endmarkdown %}
-                    <nav>
+                    <nav class="footer__links footer__links--social">
                         <ul>{% for link in footer.socialmedialinks %}<li><a href="{{ link.url }}" rel="me" title="{{ link.title }}"><span icon="{{ icons[link.icon] | safe }}"></span></a></li>{% endfor %}</ul>
                     </nav>
                 </div>
                 {% endif %}
-                <div>{% markdown %}{% include "../data/config/footercontent.md" %}{% endmarkdown %}</div>
+                <div class="pancake__slice">{% markdown %}{% include "../data/config/footercontent.md" %}{% endmarkdown %}</div>
             </div>
-            <div>
-                <nav>
-                    <ul>{% for link in footer.bottomlinks %}<li><a href="{{ link.url }}"{% if link.url == page.url %} active="true"{% endif %}>{{ link.title }}</a></li>{% endfor %}</ul>
+            <div class="footer__bottom">
+                <nav class="footer__links">
+                    <ul>{% for link in footer.footerlinks %}<li><a href="{{ link.url }}"{% if link.url == page.url %} active="true"{% endif %}>{{ link.title }}</a></li>{% endfor %}</ul>
                 </nav>
-                <small>{{ footer.copyright }}</small>
+                <small class="footer__copyright">{{ footer.copyright }}</small>
             </div>
         </footer>
         <a class="page__toggle" href="javascript:(e=>document.querySelector('.page').setAttribute('class', (document.querySelector('.page').getAttribute('class') === 'page') ? 'page page--menu' : 'page'))()" title="Menu"></a>

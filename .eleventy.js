@@ -42,11 +42,11 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addPairedShortcode('pancake', function(contents) {
-        return `<div pancake="deconstructed">${contents}</div>`;
+        return `<div class="pancake">${contents}</div>`;
     });
 
     eleventyConfig.addPairedShortcode('slice', function(contents) {
-        return `<div>${contents}</div>`;
+        return `<div class="pancake__slice">${contents}</div>`;
     });
 
     eleventyConfig.addPairedShortcode('markdown', function(content) {

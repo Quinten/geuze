@@ -94,7 +94,7 @@ collections:
         fields:
           - {name: "logo", label: "Logo", widget: "image"}
           - name: "links"
-            label: "Quick links"
+            label: "Header links"
             widget: "list"
             fields:
               - {label: "Title", name: "title", widget: "string"}
@@ -149,8 +149,8 @@ collections:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}
               - {label: "Icon", name: "icon", widget: "select", options: ["facebook", "twitter", "instagram", "youtube", "github", "bitbucket", "gitlab", "vimeo", "pinterest", "snapchat", "twitch", "tumblr", "linkedin"]}
-          - name: "bottomlinks"
-            label: "Bottom Links"
+          - name: "footerlinks"
+            label: "Footer Links"
             widget: "list"
             fields:
               - {label: "Title", name: "title", widget: "string"}

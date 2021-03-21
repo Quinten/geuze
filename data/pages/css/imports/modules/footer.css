@@ -1,4 +1,4 @@
-.page__footer {
+.footer {
     background: var(--muted-bg);
     display: flex;
     flex-direction: column;
@@ -6,7 +6,8 @@
     padding: 1em 0;
 }
 
-body > footer > div {
+.footer__bottom,
+.footer__top {
     width: 100%;
     max-width: calc(960px + 2em);
     display: flex;
@@ -15,44 +16,48 @@ body > footer > div {
     align-items: center;
 }
 
-body > footer > div[pancake=deconstructed] {
+.footer__top {
     margin-bottom: 1em;
 }
 
-body > footer > div[pancake=deconstructed] > div {
+.footer__top .pancake__slice {
     margin: 1em;
 }
 
-body > footer > div[pancake=deconstructed] nav {
+.footer__top .pancake__slice .pancake__slice {
+    margin: 0;
+}
+
+.footer__links--social {
     margin-left: -1em;
 }
 
-body > footer > div:last-child small {
+.footer__copyright {
     display: block;
     padding: 1rem;
 }
 
-body > footer > div nav ul {
+.footer__links ul {
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-body > footer > div nav li {
+.footer__links li {
     display: block;
     padding: 1em;
 }
 
-body > footer a {
+.footer a {
     color: var(--body-color);
     text-decoration: none;
 }
 
-body > footer a:hover {
+.footer a:hover {
     color: var(--muted-color);
 }
 
-body > footer strong {
+.footer strong {
     font-family: var(--heading-font);
     display: block;
     font-size: 1.17em;
