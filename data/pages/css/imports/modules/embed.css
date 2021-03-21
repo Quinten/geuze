@@ -1,10 +1,10 @@
-[iframe="responsive"] {
+.embed__container {
     position: relative;
     padding-bottom: 75%;
     background: black;
 }
 
-[iframe="responsive"] iframe {
+.embed__container iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -12,16 +12,16 @@
     height: 100%;
 }
 
-[facade] img {
+.embed__facade img {
     width: 100%;
 }
 
-[facade] {
+.embed__facade {
     position: relative;
     cursor: pointer;
 }
 
-[facade]:after {
+.embed__facade:after {
     position: absolute;
     width: 128px;
     height: 128px;
@@ -37,6 +37,6 @@
     font-size: 96px;
 }
 
-[facade]:hover:after {
+.embed__facade:hover:after {
     font-size: 100px;
 }

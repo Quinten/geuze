@@ -37,12 +37,12 @@
 })();
 
 (function () {
-    var facades = document.querySelectorAll('[facade]')
+    var facades = document.querySelectorAll('.embed__facade')
     for (var i = 0; i < facades.length; i++) {
         var facade = facades[i];
-        var id = facade.id;
+        var id = facade.getAttribute('data-video-id');
         facade.addEventListener('click', function () {
-            facade.parentElement.innerHTML = `<div iframe="responsive"><iframe width="480" height="360" src="https://www.youtube.com/embed/${id}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Youtube video"></iframe></div>`;
+            facade.parentElement.innerHTML = `<div class="embed__container"><iframe width="480" height="360" src="https://www.youtube.com/embed/${id}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Youtube video"></iframe></div>`;
         });
     }
 })();
