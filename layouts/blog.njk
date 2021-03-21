@@ -17,7 +17,7 @@ pagination:
 {% endfor %}
 </div>
 {% if pagination.pages.length > 1 %}
-<nav aria-labelledby="pagination">
+<nav aria-labelledby="pagination" class="pagination">
   <h2 id="pagination">Pages</h2>
   <ul>
 {%- for pageEntry in pagination.pages %}

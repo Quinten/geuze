@@ -1,4 +1,4 @@
-[aria-labelledby="pagination"] span,
+.pagination span,
 #pagination {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -9,7 +9,7 @@
     width: 1px;
 }
 
-[aria-labelledby="pagination"] ul {
+.pagination ul {
     display: flex;
     list-style: none;
     margin: 1em 0;
@@ -17,11 +17,11 @@
     justify-content: center;
 }
 
-[aria-labelledby="pagination"] ul li {
+.pagination li {
     margin: 0 .25em;
 }
 
-[aria-labelledby="pagination"] a {
+.pagination a {
     display: block;
     width: 2em;
     height: 2em;
@@ -32,15 +32,15 @@
     text-align: center;
 }
 
-[aria-labelledby="pagination"] a[aria-current],
-[aria-labelledby="pagination"] a:hover {
+.pagination a[aria-current],
+.pagination a:hover {
     background: var(--muted-bg);
 }
 
-[aria-labelledby="pagination"] a[aria-current] {
+.pagination a[aria-current] {
     pointer-events: none;
 }
 
-[aria-labelledby="pagination"] [aria-hidden] + [aria-hidden] {
+.pagination [aria-hidden] + [aria-hidden] {
     display: none;
 }
