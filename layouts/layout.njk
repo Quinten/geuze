@@ -16,9 +16,11 @@ substyles: false
         {% if substyles %}<style>{% include "../data/pages/css/" + substyles + ".njk" %}</style>{% endif %}
         <link rel="preload" href="/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/css/fonts.css"></noscript>
+        {% if theming.googlefonturl %}
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preload" href="{{ theming.googlefonturl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ theming.googlefonturl }}"></noscript>
+        {% endif %}
         {% for favicon in faviconmeta %}{{ favicon | safe }}{% endfor %}
         <meta name="author" content="{{ opengraph.author }}">
         <meta name="twitter:card" content="summary_large_image">

@@ -185,6 +185,7 @@ collections:
           - label: "Google Font URL"
             name: "googlefonturl"
             widget: "string"
+            required: false
           - label: "Favicon"
             name: "favicon"
             widget: "image"
