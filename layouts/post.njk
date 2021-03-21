@@ -8,7 +8,7 @@ substyles: post
 ---
 <article>
     {% if poster %}
-    <img src="{{ poster }}" alt="{{ title }}" />
+    <img src="{{ poster }}" alt="{{ title }}" class="poster" />
     {% endif %}
     <h1>{{ title }}</h1>
     <p><strong>{{ page.date.toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'}) }}</strong></p>

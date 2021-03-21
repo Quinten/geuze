@@ -1,9 +1,4 @@
-article,
-#comments-list {
-    margin-bottom: 2em;
-}
-
-article img:first-child {
+.poster {
     margin: 0 -1em;
     width: calc(100% + 2em);
     max-width: calc(100% + 2em);

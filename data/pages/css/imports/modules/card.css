@@ -35,6 +35,10 @@
     align-self: center;
 }
 
+.card__list {
+    margin-bottom: 2em;
+}
+
 .card__list .card {
     margin-bottom: 1em;
 }
