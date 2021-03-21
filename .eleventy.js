@@ -61,7 +61,7 @@ module.exports = function(eleventyConfig) {
         t = (title !== undefined && title !== 'undefined') ? `<strong>${a}${t}${ae}</strong>` : '';
         let p = (description !== undefined && description !== 'undefined') ? `<p>${description}</p>` : '';
         let b = (url !== undefined && url !== 'undefined' && cta !== undefined && cta !== 'undefined') ? `<a href="${url}" button="funnel">${cta}</a>` : '';
-        return `<div card="true">${i}${t}${p}${b}</div>`;
+        return `<div class="card">${i}${t}${p}${b}</div>`;
     });
 
     eleventyConfig.addPlugin(lazyImagesPlugin, {

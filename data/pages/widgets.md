@@ -27,4 +27,4 @@ Nest wysiwyg editors in each other, to create responsive columns.
 
 ## Recent posts
 
-<div wrap="cards">{% for post in collections.post reversed limit:3 %}{% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date | blogdateformat }}</strong></p><p>{{ post.data.metadescription }}{% endcard %}{% endfor %}</div>
+<div class="card__list">{% for post in collections.post reversed limit:3 %}{% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date | blogdateformat }}</strong></p><p>{{ post.data.metadescription }}{% endcard %}{% endfor %}</div>
