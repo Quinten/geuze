@@ -193,7 +193,7 @@
                             sliceCode = sliceCode.replace(/{% card "(.*)", "(.*)", "(.*)", "(.*)" %}(.*){% endcard %}/g, '<div class="card"><a href="$3"><img src="$1" alt="$2" loading="lazy"></a><strong><a href="$3">$2</a></strong><p>$5</p><a href="$3" class="button button--funnel">$4</a></div>');
                             sliceCode = sliceCode.replace(/{% youtube "(\S+)" %}/g, '<img src="http://img.youtube.com/vi/$1/maxresdefault.jpg" alt="Youtube Video"/>');
                             sliceCode = converter.makeHtml(sliceCode);
-                            code = code + '<div>';
+                            code = code + '<div class="pancake__slice">';
                             code = code + sliceCode;
                             code = code + '</div>';
                         });
