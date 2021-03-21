@@ -1,165 +1,61 @@
-body > header img {
+@media screen and (min-width: 768px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.header__logo {
     display: block;
     width: auto;
     height: 3em;
     margin: .5em 1em;
 }
 
-body > nav {
-    width: 100vw;
-    background: var(--cta-color);
-}
-
-body > nav ul {
-    width: 100%;
-    max-width: calc(960px + 2em);
-    margin: 0 auto;
-    padding: 0;
-    display: block;
-}
-
-body > header > nav > ul {
-    padding: 0;
-    margin: 0;
-}
-
-body > nav > ul li a[active="true"],
-body > nav > ul li a:hover {
-    background: var(--cta-hover-color);
-}
-
 @media screen and (min-width: 768px) {
 
-    body > header > nav > ul,
-    body > nav > ul {
-        display: flex;
-    }
-
-    body > header {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    body > header img {
+    .header__logo {
         height: 4em;
         margin: 1em;
     }
 }
 
-body > header > nav > ul > li,
-body > nav ul li {
+.header__links ul {
+    padding: 0;
+    margin: 0;
+}
+
+.header__links li {
     display: block;
 }
 
-body > header > nav > ul > li > a,
-body > nav ul > li > a {
+.header__links a {
     display: block;
     padding: 1em;
     text-decoration: none;
     color: var(--cta-text-color);
 }
 
-body > header > nav > ul > li > a:hover,
-body > nav ul > li > a:hover {
+.header__links a.is-active,
+.header__links a:hover {
     color: var(--cta-text-color);
+    background: var(--cta-hover-color);
 }
+
 @media screen and (min-width: 768px) {
 
-    body > header > nav > ul > li > a {
+    .header__links ul {
+        display: flex;
+    }
+
+    .header__links a {
         color: var(--body-color);
     }
 
-    body > header > nav > ul > li > a:hover {
+    .header__links a.is-active,
+    .header__links a:hover {
         color: var(--muted-color);
-    }
-
-    body > nav > ul > li {
-        position: relative;
-    }
-
-    body > nav > ul > li > ul {
-        background: var(--cta-hover-color);
-        position: absolute;
-        z-index: 1;
-        top: 100%;
-        left: 0;
-        width: auto;
-        white-space: nowrap;
-        display: none;
-    }
-
-    body > nav > ul > li:hover {
-        background: var(--cta-hover-color);
-    }
-
-    body > nav > ul > li:hover > ul {
-        display: block;
-    }
-
-    body > nav > ul > li > ul > li > a[active="true"],
-    body > nav > ul > li > ul > li >a:hover {
-        background: var(--cta-color);
-    }
-}
-
-body > a {
-    display: none;
-}
-
-body > a:before {
-    content: "\f0c9";
-    font-family: 'geuze-icons';
-    font-size: 2em;
-    line-height: 1em;
-    display: block;
-}
-
-@media screen and (max-width: 767px) {
-
-    body > a {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 1em;
-        text-decoration: none;
-        color: var(--cta-color);
-    }
-
-    body[menu="true"] {
-        background: var(--cta-color);
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        padding-top: 4em;
-    }
-
-    body > nav,
-    body > header > nav,
-    body[menu="true"] > footer,
-    body[menu="true"] > main,
-    body[menu="true"] > header img {
-        display: none;
-    }
-
-    body[menu="true"] > header > nav,
-    body[menu="true"] > nav {
-        display: block;
-    }
-
-    body[menu="true"] > a {
-        color: var(--cta-text-color);
-    }
-
-    body[menu="true"] > a:before {
-        content: "\f00d";
-    }
-
-    body > nav > ul > li > ul > li > a {
-        padding-left: 2em;
-    }
-
-    body > header > nav > ul > li > a[active="true"],
-    body > header > nav > ul > li > a:hover {
-        background: var(--cta-hover-color);
+        background: transparent;
     }
 }

@@ -1,0 +1,71 @@
+.navigation {
+    background: var(--cta-color);
+}
+
+.navigation ul {
+    width: 100%;
+    max-width: calc(960px + 2em);
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+}
+
+.navigation li {
+    display: block;
+}
+
+.navigation a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: var(--cta-text-color);
+}
+
+.navigation a.is-active,
+.navigation a:hover {
+    color: var(--cta-text-color);
+    background: var(--cta-hover-color);
+}
+
+.navigation > ul > li > ul > li > a {
+    padding-left: 2em;
+}
+
+@media screen and (min-width: 768px) {
+
+    .navigation > ul {
+        display: flex;
+    }
+
+    .navigation > ul > li {
+        position: relative;
+    }
+
+    .navigation > ul > li > ul {
+        background: var(--cta-hover-color);
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 0;
+        width: auto;
+        white-space: nowrap;
+        display: none;
+    }
+
+    .navigation > ul > li:hover {
+        background: var(--cta-hover-color);
+    }
+
+    .navigation > ul > li:hover > ul {
+        display: block;
+    }
+
+    .navigation > ul > li > ul > li > a {
+        padding-left: 1em;
+    }
+
+    .navigation > ul > li > ul > li > a.is-active,
+    .navigation > ul > li > ul > li > a:hover {
+        background: var(--cta-color);
+    }
+}

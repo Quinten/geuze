@@ -30,7 +30,7 @@
         var href = link.getAttribute('href');
         if (href.indexOf('#') > -1 && href.indexOf(window.location.pathname) > -1) {
             link.addEventListener('click', function (e) {
-                document.querySelector('body').setAttribute('menu', false);
+                document.querySelector('.page').setAttribute('class', 'page');
             });
         }
     }

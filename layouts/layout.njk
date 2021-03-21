@@ -35,16 +35,16 @@ substyles: false
         <meta property="og:description" content="{{ metadescription }}">
     </head>
     <body class="page">
-        <header class="page__header">
+        <header class="page__header header">
             <a href="/">
-                <img src="{{ header.logo }}" alt="logo" width="128" height="64" />
+                <img src="{{ header.logo }}" alt="logo" width="128" height="64" class="header__logo" />
             </a>
-            <nav>
-                <ul>{% for link in header.links %}<li><a href="{{ link.url }}"{% if link.url == page.url %} active="true"{% endif %}>{{ link.title }}</a></li>{% endfor %}</ul>
+            <nav class="header__links">
+                <ul>{% for link in header.links %}<li><a href="{{ link.url }}"{% if link.url == page.url %} class="is-active"{% endif %}>{{ link.title }}</a></li>{% endfor %}</ul>
             </nav>
         </header>
-        <nav class="page__nav">
-            <ul>{% for link in nav.links %}<li><a href="{{ link.url }}"{% if link.url == page.url %} active="true"{% endif %}>{{ link.title }}</a>{% if link.sublinks.length %}<ul>{% for sublink in link.sublinks %}<li><a href="{{ sublink.url }}"{% if sublink.url == page.url %} active="true"{% endif %}>{{ sublink.title }}</a></li>{% endfor %}</ul>{% endif %}</li>{% endfor %}</ul>
+        <nav class="page__nav navigation">
+            <ul>{% for link in nav.links %}<li><a href="{{ link.url }}"{% if link.url == page.url %} class="is-active"{% endif %}>{{ link.title }}</a>{% if link.sublinks.length %}<ul>{% for sublink in link.sublinks %}<li><a href="{{ sublink.url }}"{% if sublink.url == page.url %} class="is-active"{% endif %}>{{ sublink.title }}</a></li>{% endfor %}</ul>{% endif %}</li>{% endfor %}</ul>
         </nav>
         <main class="page__main">
             {{ content | safe }}
@@ -68,7 +68,7 @@ substyles: false
                 <small>{{ footer.copyright }}</small>
             </div>
         </footer>
-        <a href="javascript:(e=>document.querySelector('body').setAttribute('menu', document.querySelector('body').getAttribute('menu') !== 'true'))()" title="Menu"></a>
+        <a class="page__toggle" href="javascript:(e=>document.querySelector('.page').setAttribute('class', (document.querySelector('.page').getAttribute('class') === 'page') ? 'page page--menu' : 'page'))()" title="Menu"></a>
         <script src="/js/styles.js" async></script>
         {% if page.url == '/' %}
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
