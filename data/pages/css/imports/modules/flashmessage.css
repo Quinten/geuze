@@ -1,4 +1,4 @@
-div[message] {
+.message {
     position: fixed;
     top: 1em;
     background: var(--success-color);
@@ -11,10 +11,10 @@ div[message] {
     transition: margin-top 750ms cubic-bezier(0.840, -0.600, 0.180, 1.560);
 }
 
-div[message][error] {
+.message--error {
     background: var(--error-color);
 }
 
-div[message="flash"] {
+.message--flash {
     margin-top: 0;
 }
