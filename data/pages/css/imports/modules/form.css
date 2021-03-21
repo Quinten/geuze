@@ -20,6 +20,7 @@ input[type="text"] {
     border-radius: 5px;
     font-family: var(--main-font);
     box-sizing: border-box;
+    color: var(--muted-color);
 }
 
 textarea:focus,
@@ -45,6 +46,7 @@ textarea {
     border-radius: 5px;
     font-family: var(--main-font);
     box-sizing: border-box;
+    color: var(--muted-color);
 }
 
 input + p,
