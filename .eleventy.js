@@ -60,7 +60,7 @@ module.exports = function(eleventyConfig) {
         let i = (image !== undefined && image !== 'undefined') ? `${a}<img src="${image}" alt="${t}" loading="lazy" />${ae}` : '';
         t = (title !== undefined && title !== 'undefined') ? `<strong>${a}${t}${ae}</strong>` : '';
         let p = (description !== undefined && description !== 'undefined') ? `<p>${description}</p>` : '';
-        let b = (url !== undefined && url !== 'undefined' && cta !== undefined && cta !== 'undefined') ? `<a href="${url}" button="funnel">${cta}</a>` : '';
+        let b = (url !== undefined && url !== 'undefined' && cta !== undefined && cta !== 'undefined') ? `<a href="${url}" class="button button--funnel">${cta}</a>` : '';
         return `<div class="card">${i}${t}${p}${b}</div>`;
     });
 

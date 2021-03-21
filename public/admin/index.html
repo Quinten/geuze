@@ -76,7 +76,7 @@
                     let i = (image !== undefined && image !== 'undefined') ? `${a}<img src="${image}" alt="${t}" loading="lazy" />${ae}` : '';
                     t = (title !== undefined && title !== 'undefined') ? `<strong>${a}${t}${ae}</strong>` : '';
                     let p = (description !== undefined && description !== 'undefined') ? `<p>${description}</p>` : '';
-                    let b = (url !== undefined && url !== 'undefined' && cta !== undefined && cta !== 'undefined') ? `<a href="${url}" button="funnel">${cta}</a>` : '';
+                    let b = (url !== undefined && url !== 'undefined' && cta !== undefined && cta !== 'undefined') ? `<a href="${url}" class="button button--funnel">${cta}</a>` : '';
                     return (`<div class="card">${i}${t}${p}${b}</div>`);
                 }
             });
@@ -190,7 +190,7 @@
                             sliceCode = sliceCode.replace(/{% pancake %}/g, '<div class="pancake">');
                             sliceCode = sliceCode.replace(/{% slice %}/g, '<div class="pancake__slice">');
                             sliceCode = sliceCode.replace(/{% endpancake %}|{% endslice %}/g, '</div>');
-                            sliceCode = sliceCode.replace(/{% card "(.*)", "(.*)", "(.*)", "(.*)" %}(.*){% endcard %}/g, '<div class="card"><a href="$3"><img src="$1" alt="$2" loading="lazy"></a><strong><a href="$3">$2</a></strong><p>$5</p><a href="$3" button="funnel">$4</a></div>');
+                            sliceCode = sliceCode.replace(/{% card "(.*)", "(.*)", "(.*)", "(.*)" %}(.*){% endcard %}/g, '<div class="card"><a href="$3"><img src="$1" alt="$2" loading="lazy"></a><strong><a href="$3">$2</a></strong><p>$5</p><a href="$3" class="button button--funnel">$4</a></div>');
                             sliceCode = sliceCode.replace(/{% youtube "(\S+)" %}/g, '<img src="http://img.youtube.com/vi/$1/maxresdefault.jpg" alt="Youtube Video"/>');
                             sliceCode = converter.makeHtml(sliceCode);
                             code = code + '<div>';

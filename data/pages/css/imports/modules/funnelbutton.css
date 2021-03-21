@@ -1,4 +1,4 @@
-[button="funnel"] {
+.button--funnel {
     border: 1px var(--funnel-color) solid;
     background: var(--funnel-color);
     color: var(--funnel-text-color);
@@ -12,7 +12,7 @@
     display: inline-block;
 }
 
-[button="funnel"]:hover {
+.button--funnel:hover {
     border: 1px var(--funnel-hover-color) solid;
     background: var(--funnel-hover-color);
     color: var(--funnel-text-color);
