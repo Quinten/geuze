@@ -57,7 +57,7 @@ textarea + p {
 
 input[error="true"],
 textarea[error="true"] {
-    border-color: red;
+    border-color: var(--muted-color);
 }
 
 button {
