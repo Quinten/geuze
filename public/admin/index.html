@@ -207,14 +207,14 @@
                 id: "recentposts",
                 label: "Recent posts",
                 fields: [{name: 'nposts', label: 'Number of posts', widget: 'number', default: 3, value_type: 'int', min: 1}],
-                pattern: /^<div class="card__list">{% for post in collections.post reversed limit:(\S+) %}{% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date \| blogdateformat }}<\/strong><\/p><p>{{ post.data.metadescription }}{% endcard %}{% endfor %}<\/div>$/,
+                pattern: /^<div class="card__list">{% assign posts = collections.post \| reverse %}{% for post in posts limit:(\S+) %}{% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date \| blogdateformat }}<\/strong><\/p><p>{{ post.data.metadescription }}{% endcard %}{% endfor %}<\/div>$/,
                 fromBlock: function(match) {
                     return {
                         nposts: match[1]
                     };
                 },
                 toBlock: function(obj) {
-                    return `<div class="card__list">{% for post in collections.post reversed limit:${obj.nposts} %}{% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date | blogdateformat }}</strong></p><p>{{ post.data.metadescription }}{% endcard %}{% endfor %}</div>`;
+                    return `<div class="card__list">{% assign posts = collections.post | reverse %}{% for post in posts limit:${obj.nposts} %}{% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date | blogdateformat }}</strong></p><p>{{ post.data.metadescription }}{% endcard %}{% endfor %}</div>`;
                 },
                 toPreview: function(obj) {
                     let html = '<div class="card__list">';
