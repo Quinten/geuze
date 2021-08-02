@@ -1,7 +1,7 @@
 const CleanCSS = require('clean-css');
 const MarkdownIt = require('markdown-it');
 const MarkdownItAnchor = require('markdown-it-anchor');
-const MarkdownLib = MarkdownIt({ html: true }).use(MarkdownItAnchor);
+const MarkdownLib = MarkdownIt({ html: true, linkify: true }).use(MarkdownItAnchor);
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 const sizeOf = require('image-size');
 
