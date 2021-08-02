@@ -26,5 +26,3 @@ Nest wysiwyg editors in each other, to create responsive columns.
 {% pancake %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "More lorem" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus.{% endcard %}</p>{% endslice %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "More lorem" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus. Phasellus lacinia lectus dignissim, fermentum tortor in, hendrerit est.{% endcard %}</p>{% endslice %}{% slice %}<p>{% card "/media/itch-thumb.png", "Lorem ipsum", "/", "More lorem" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac vulputate risus.{% endcard %}</p>{% endslice %}{% endpancake %}
 
 ## Recent posts
-
-<div class="card__list">{% for post in collections.post reversed limit:3 %}{% card undefined, post.data.title, post.url, undefined %}<strong>{{ post.data.date | blogdateformat }}</strong></p><p>{{ post.data.metadescription }}{% endcard %}{% endfor %}</div>
