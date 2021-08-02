@@ -37,7 +37,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget("./data/pages/css/imports/");
 
     eleventyConfig.addShortcode('youtube', function(id) {
-        return `<div class="embed"><div class="embed__facade embed__facade--youtube" data-video-id="${id}"><img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="youtube" /></div></div>`;
+        return `<div class="embed"><div class="embed__facade embed__facade--youtube" data-video-id="${id}"><img src="https://img.youtube.com/vi/${id}/maxresdefault.jpg" alt="youtube" /></div></div>`;
     });
 
     eleventyConfig.addPairedShortcode('pancake', function(contents) {
