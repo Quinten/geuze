@@ -5,9 +5,15 @@
         <title>admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <style>
+            /* https://github.com/decaporg/decap-cms/issues/6580 */
+            [data-slate-editor] {
+                -webkit-user-modify: read-write !important;
+            }
+        </style>
     </head>
     <body>
-        <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+        <script src="https://unpkg.com/netlify-cms@^2.10.192/dist/netlify-cms.js"></script>
         <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
         <script>
             let converter = new showdown.Converter();
